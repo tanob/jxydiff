@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE animal [
+<!ELEMENT animal ANY>
+<?ǹ an illegal char #x1f9
+ in PITarget ?>
+]>
+<animal/>

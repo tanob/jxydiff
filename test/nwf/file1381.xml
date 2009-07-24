@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+    <!ELEMENT root EMPTY>
+
+    <!-- SGML-ism:  illegal attribute default -->
+
+    <!ATTLIST root
+	language	CDATA	#CURRENT
+	>
+
+]>
+
+<root/>

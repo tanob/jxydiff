@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+    <!ELEMENT root EMPTY>
+    <!ATTLIST root
+	req CDATA #REQUIRED
+	>
+]>
+
+<root req="foo"/>

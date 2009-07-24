@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE root 
+[
+<!ELEMENT root (#PCDATA)>
+<!ATTLIST root att CDATA #IMPLIED>
+<!--* wrong keyword: system  *-->
+<!ENTITY pImage system "image.jpg">
+]>
+<root/>

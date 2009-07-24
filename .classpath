@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-test"/>
+	<classpathentry kind="lib" path="thirdparty/dom4j-1.5-rc1.jar"/>
+	<classpathentry kind="lib" path="thirdparty/junit.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/aelfred-1.2.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/jalopy-1.0b11.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/jalopy-ant-0.6.2.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/jaxp-1.2.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/jdom-1.0b8.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/log4j-1.2.6.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/oro-2.0.6.jar"/>
+	<classpathentry kind="lib" path="thirdparty/lib/sax-2.0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="thirdparty/antlr.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

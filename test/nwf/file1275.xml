@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc
+[
+<!ELEMENT doc EMPTY>
+<!NOTATION a SYSTEM "a">
+<!ATTLIST doc att NOTATION "a" #IMPLIED>
+]>
+<doc/>

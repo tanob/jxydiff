@@ -1,0 +1,1002 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Jalopy - Change history</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><meta name="keywords" content="Java, convention, source, code, formatter, beautifier, pretty, printer, format, beautify, layout, coding, open, style, standard, transform, parser, Sun, ANTLR, Ant, Eclipse, JBuilder, NetBeans, jEdit, jakarta, JDeveloper, generator, generation, JDE, maven">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="center"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                        <a href="./history.html" class="navlink2">History</a> |
+                        <a href="./manual.html" class="navlink2">Manual</a> |
+                        <a href="./faq.html" class="navlink2">FAQ</a> |
+                        <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr></tbody></table></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+            This page generated: <strong>June 8 2004</strong></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td><div class="article" lang="en"><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e75"></a>1.0 Beta 10 (2002-11-14)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Work started to provide a FAQ. There is currently only one topic: How one should submit a
+bug report
+</li></ul></div><p></p></li><li>
+Bug fixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Newlines after case statements were not printed (as always: only with Sun brace style)
+Reported by Sebastian Eigner
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=638369&amp;group_id=45216" target="_top">#638369</a>)
+</li><li style="list-style-type: square">
+In certain cases the indentation after printing assignments was not correct. Reported by
+Grzegorz Pilarczyk
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=638279&amp;group_id=45216" target="_top">#638279</a>)
+</li><li style="list-style-type: square">
+Array types were not correctly printed when they contained more complicated expressions.
+Reported by Benni Mas
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=638355&amp;group_id=45216" target="_top">#638355</a>)
+</li><li style="list-style-type: square">
+The settings format was not correctly updated from 1.0b7 to 1.0b8. Reported by
+Marc Gerstmair
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=637864&amp;group_id=45216" target="_top">#637864</a>)
+</li><li style="list-style-type: square">
+Code conventions were exported with platform specific encodings which could easily cause
+harm. Additionally no XML declaration was printed. Now <tt class="literal">UTF-8</tt> is used
+and the declaration printed. Reported by Tim Moore
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=637262&amp;group_id=45216" target="_top">#637262</a>)
+</li><li style="list-style-type: square">
+The wrapper scripts only worked when the full pathname to the script-files were used.
+Reported and fixed by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=637915&amp;group_id=45216" target="_top">#637915</a>).
+Thanks
+</li><li style="list-style-type: square">
+Blank lines before blocks without associated block statements
+(I call them <span class="emphasis"><em>freestanding blocks</em></span>) were not printed
+</li><li style="list-style-type: square">
+Additional semicolon(s) after the last import statement caused the blank lines logic to
+fail, no blank lines were printed for such a (rare) case
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+JBuilder Plug-in: the Plug-in now displays an error message if no compatible log4j version
+could be found in the classpath and shows a workaround for the problem
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e135"></a>1.0 Beta 9 (2002-11-12)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+New indentation policy. See
+<a href="./indentation.html#indentation-policy-standard" target="_top">Standard indent</a></li><li style="list-style-type: square">
+New alignment options for the <tt class="literal">operators</tt> and ternary expression. See
+<a href="./indentation.html#indentation-align-method-chains" target="_top">Align Method Call chains</a> and
+<a href="./indentation.html#indentation-align-ternary" target="_top">Align Ternary expressions</a></li><li style="list-style-type: square">
+The wrapping options has been extended. See
+<a href="./wrapping.html#wrap-left-parenthesis" target="_top">Wrap after left parenthesis</a>,
+<a href="./wrapping.html#wrap-right-parenthesis" target="_top">Wrap before right parenthesis</a>,
+<a href="./wrapping.html#wrap-after-assignment" target="_top">Wrap after assignments </a>,
+<a href="./wrapping.html#wrap-grouping-paren" target="_top">Wrap grouping parentheses</a>,
+<a href="./wrapping.html#wrap-always-extends" target="_top">Wrap after extends types when exceed</a>,
+<a href="./wrapping.html#wrap-always-implements" target="_top">Wrap after implements types when exceed</a>,
+<a href="./wrapping.html#wrap-always-throws" target="_top">Wrap after throws types when exceed</a> and
+<a href="./wrapping.html#wrap-always-param" target="_top">After parameters/expressions when exceed</a></li><li style="list-style-type: square">
+New curly brace wrapping option. See
+<a href="./printer.html#braces-different-wrapped" target="_top">Treat class/method block different if wrapped</a></li><li style="list-style-type: square">
+The output style for field Javadoc comments is now configurable. See
+<a href="./javadoc.html#javadoc-misc" target="_top">Field comments in single line</a></li></ul></div><p>
+All aforementioned features were requested, sponsored and thoroughly tested by the German
+<a href="http://www.tk-online.de/" target="_top">Techniker Krankenkasse</a>. Hurray!
+</p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The sources have been internationalized. If you're willing to provide translations of the
+used message bundles, please <a href="./contact.html" target="_top">contact</a> me
+</li><li style="list-style-type: square">
+Jalopy now contains a simple Code Inspector that is able to inspect your sources for
+naming convention violations and possible code weaknesses. See the
+<a href="./inspector.html" target="_top">Code Inspector</a> chapter in the manual
+</li><li style="list-style-type: square">
+New history methods that uses checksums to better handle change detection for files.
+See <a href="./misc.html#misc-history" target="_top">History section</a>. Very cool feature
+contributed by Michael Callum
+</li><li style="list-style-type: square">
+Javadoc tag checking for <tt class="literal">@throws</tt> tags can now be enabled
+separately. See <a href="./javadoc.html#javadoc-correct-throws" target="_top">Correct @throws tags</a></li><li style="list-style-type: square">
+Array type brackets may now be printed after the identifier.
+See <a href="./misc.html#misc-array-brackets" target="_top">Misc section</a>.
+Requested by John Zukowski
+(<a href="http://sf.net/tracker/?func=detail&amp;aid=599239&amp;group_id=45216&amp;atid=442215" target="_top">#599239</a>)
+</li><li style="list-style-type: square">
+You can now specify whether Jalopy should insert a trailing empty line at the
+end of files in order to avoid problems with certain text formatters and processors.
+See <a href="./misc.html#misc-trailing-newline" target="_top">Misc section</a>. Note that
+Jalopy always inserts a trailing newline after EOF-comments (like footers).
+Requested by David Karr
+(<a href="http://sf.net/tracker/?func=detail&amp;aid=589696&amp;group_id=45216&amp;atid=442215" target="_top">#589696</a>)
+</li><li style="list-style-type: square">
+The order of import statement groups is now user configurable. See <a href="./imports.html" target="_top">Import section</a>.
+Requested by J&uuml;rgen Ebert
+(<a href="http://sf.net/tracker/?func=detail&amp;aid=591904&amp;group_id=45216&amp;atid=442215" target="_top">#591904</a>)
+</li><li style="list-style-type: square">
+The <i class="guilabel">Format</i> menu item now appears in the context menu of the Content
+Pane too
+</li><li style="list-style-type: square">
+Auto-correction for Javadoc <tt class="literal">@throws</tt> tags can now be
+controlled separately. See <a href="./javadoc.html#javadoc-correct-throws" target="_top">Correct <tt class="literal">@throws</tt> tags</a> for insight
+</li><li style="list-style-type: square">
+NetBeans Plug-in: the Format action is now available for Servlet nodes too
+</li><li style="list-style-type: square">
+JBuilder Plug-in: the Format item it now available in the context menu of content tab pane too
+</li><li style="list-style-type: square">
+JBuilder Plug-in: Breakpoints and Bookmarks are restored after formatting
+</li><li style="list-style-type: square">
+JDeveloper Plug-in: the Plug-in has been completely rewritten. Formatting works for
+workspaces too, the message output is displayed in a nice tree view. And the whole thing
+is now compatible with JDeveloper 9.0.3
+</li><li style="list-style-type: square">
+The core engine is now able to track positions. The IDE Plug-ins are therefore now able
+to restore the mouse pointer correctly (it will be positioned before the line with the
+node that was nearest to the last caret position)
+</li></ul></div><p></p></li><li>
+Bug fixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The cleanup of the backup directory could lead to NPE. Reported by Mike Dubman
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=617942&amp;group_id=45216" target="_top">#617942</a>)
+</li><li style="list-style-type: square">
+The output of array initializers has been improved. Reported by Kate Rhodes
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=617684&amp;group_id=45216" target="_top">#617684</a>)
+</li><li style="list-style-type: square">
+Important statements collapsing failed because of incompatible parsetree changes between 1.0b7 and 1.0b8. Reported by Mark Ralph
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=617608&amp;group_id=45216" target="_top">#617608</a>)
+</li><li style="list-style-type: square">
+Handling of Javadoc comments failed for methods/ctors returning an array type. Reported by Magnus Ihse
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=615039&amp;group_id=45216" target="_top">#615039</a>)
+</li><li style="list-style-type: square">
+The problem with wrong indentation after assignments has gone. Reported by Timo Carl
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=612049&amp;group_id=45216" target="_top">#612049</a>)
+</li><li style="list-style-type: square"><span class="emphasis"><em>Treat different</em></span> option has been corrected to work with all styles. Reported by Eric Lamontagne
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=611182&amp;group_id=45216" target="_top">#611182</a>)
+</li><li style="list-style-type: square">
+I've fixed some cases where Jalopy produced trailing whitespace on wrapping lines. There may still be others...
+Reported by Ralf Wiebicke
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=607697&amp;group_id=45216" target="_top">#607697</a>)
+</li><li style="list-style-type: square">
+The Javadoc printer failed to output HTML definition lists correctly. Reportey by
+David Cooper
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=607416&amp;group_id=45216" target="_top">#607416</a>)
+</li><li style="list-style-type: square">
+The Javadoc printer failed to output HTML defintion lists correcty. Reportey by
+David Cooper
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=607416&amp;group_id=45216" target="_top">#607416</a>)
+</li><li style="list-style-type: square">
+Array initializers inside statements were not printed correctly. Reported by
+Dirk Hoffmann
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=607303&amp;group_id=45216" target="_top">#607303</a>)
+</li><li style="list-style-type: square">
+Variable macros did (as documented) not work for names like <tt class="literal">user.name</tt>. Reported by
+Don Johnson
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=606173&amp;group_id=45216" target="_top">#606173</a>)
+</li><li style="list-style-type: square">
+Empty lines in multi-line comments produced trailing whitespace.
+Reported by Ralf Wiebicke
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=605998&amp;group_id=45216" target="_top">#605998</a>)
+</li><li style="list-style-type: square">
+Javadoc trailing comments were ignored. Jalopy will now (again) treat such cases as errors.
+Reported by Ralf Wiebicke
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=604072&amp;group_id=45216" target="_top">#604072</a>)
+</li><li style="list-style-type: square">
+Jalopy duplicated comments in some rare cases. Reported by David Cooper
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=604065&amp;group_id=45216" target="_top">#604065</a>)
+</li><li style="list-style-type: square">
+The console app failed to work on certain platforms due to classloading problems.
+Reported by Benjamin Geer
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=604038&amp;group_id=45216" target="_top">#604038</a></li><li style="list-style-type: square">
+No blank lines were kept for <tt class="literal">synchronized</tt> blocks. Reported by Kees Kuip
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=603455&amp;group_id=45216" target="_top">#603455</a></li><li style="list-style-type: square">
+Variable interpolation did not work in header or footers. Reported by Daniel Frey
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=601901&amp;group_id=45216" target="_top">#601901</a></li><li style="list-style-type: square">
+Jalopy lost trailing comments in certain cases. Reported by Shankar Unni, Steve Corwin, Ray Powell
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=601393&amp;group_id=45216" target="_top">#601393</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=602169&amp;group_id=45216" target="_top">#602169</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=603914&amp;group_id=45216" target="_top">#603914</a>)
+</li><li style="list-style-type: square">
+Jalopy failed to handle empty Javadoc Standard tags. Reported by Henrik Kj&aelig;r and Don Johnson
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=601204&amp;group_id=45216" target="_top">#601204</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=606163&amp;group_id=45216" target="_top">#606163</a>)
+</li><li style="list-style-type: square">
+JBuilder Plug-in: the Plug-in is now compatible with JBuilder 7.0. Reported by Simeon Zverinski
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=596821&amp;group_id=45216" target="_top">#596821</a>)
+</li><li style="list-style-type: square">
+The example Ant task in the manual contained a syntax error.
+Reported by Eric Larson
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=595777&amp;group_id=45216" target="_top">#595777</a>)
+</li><li style="list-style-type: square">
+With generating Javadoc comments enabled, existing
+variable/method/class-level comments were dropped if not in Javadoc style.
+Reported by John Zukowski
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=595164&amp;group_id=45216" target="_top">#595164</a>)
+</li><li style="list-style-type: square">
+Auto-insertion of braces for braceless if-else blocks did not work as expected
+(for Sun brace style). Reported by John Zukowski
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=595160&amp;group_id=45216" target="_top">#595160</a>)
+</li><li style="list-style-type: square">
+@throws tags were wrongly inserted in some cases. Reported by Jarek Sacha
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=594738&amp;group_id=45216" target="_top">#594738</a>)
+</li><li style="list-style-type: square">
+Printing of empty class/interface bodies failed, if cuddling of braces was
+enabled. Reported by Richard Tasker and Benjamin Geer
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=594076&amp;group_id=45216" target="_top">#594076</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=597080&amp;group_id=45216" target="_top">#597080</a>)
+</li><li style="list-style-type: square">
+@version tags were wrapped if max. line length exceeded, and therefore failed to
+be updated by CVS when checked in. Reported by Johnny Cass
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=592504&amp;group_id=45216" target="_top">#592504</a>)
+</li><li style="list-style-type: square">
+Jalopy used to insert two many blank lines before certain statements. Reported by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=592496&amp;group_id=45216" target="_top">#592496</a>)
+</li><li style="list-style-type: square"><tt class="filename">jalopy.sh</tt> and <tt class="filename">preferences.sh</tt> failed
+to work (under some unix flavors) because of wrong end-of-line characters.
+Actually a build/CVS problem. Reported and fixed by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=592487&amp;group_id=45216" target="_top">#592487</a>)
+</li><li style="list-style-type: square">
+Eclipse Plug-in: upon startup of the IDE <tt class="classname">org.eclipse.swt.SWTException: invalid thread access</tt>
+was thrown. Reportedy by Dirk Jacobs
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=567314&amp;group_id=45216" target="_top">#567314</a>)
+</li><li style="list-style-type: square">
+Backup files were always kept if the output target was not a file
+</li><li style="list-style-type: square">
+jEdit Plug-in: the <i class="guilabel">Format current Buffer</i> menu item was grayed out
+upon start-up if the buffer contained a non-Java file
+</li><li style="list-style-type: square">
+Console Plug-in: specifying several regular expression patterns did not work.
+Reported by Sameer Singh
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The <tt class="filename">.XML</tt> settings format has been revised. It should now be somewhat cleaner. These
+changes are transparent, the old settings format can be imported but only the new format
+will be exportet. Those who use the <tt class="filename">.XML</tt> format should re-export their settings to avoid
+the auto-transformation (and of course, there are many new switches)
+</li><li style="list-style-type: square">
+The <tt class="filename">/bin</tt> directory of the distributions have been renamed to
+<tt class="filename">/lib</tt>. For the Console and Ant Plug-ins the <tt class="filename">/bin</tt>
+now only contains the wrapper scripts and the libaries moved to <tt class="filename">/lib</tt>.
+</li><li style="list-style-type: square">
+Eclipse Plug-in: the <i class="guilabel">Format</i> label in the project view context menu
+no longer appears at the end. Suggested by Davor Cengija and Vincent Massol
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=578331&amp;group_id=45216" target="_top">#578331</a>)
+</li><li style="list-style-type: square">
+JBuilder Plug-in: the <i class="guilabel">Format</i> item in the project view context menu
+is now more context sensitive. It won't pop up for non-Java files. Additionally, when
+formatting the whole Project a confirmation message box appears
+</li><li style="list-style-type: square">
+The <tt class="literal">@todo</tt> tag is now part of the build-in tag list
+</li><li style="list-style-type: square">
+The Tab support has been rewritten. If tabs are enabled, *all* whitespace will
+be realized with tabs (not only leading whitespace as with the former
+implementation)
+</li><li style="list-style-type: square">
+Denis N. Antonioli contributed several patches for the Javadoc parser:
+<div class="itemizedlist"><ul type="circle"><li style="list-style-type: circle">
+The parser is now able to handle left curly braces that are not part of
+an In-line tag
+</li><li style="list-style-type: circle">
+Attributes must not be quoted and numeric attributes may also start with <tt class="literal">%</tt></li><li style="list-style-type: circle">
+The closing tags for &lt;dd&gt;, &lt;dl&gt;, &lt;dir&gt; are now optional
+</li></ul></div>
+Thank you!
+</li><li style="list-style-type: square">
+Parameter alignment of method or constructor declarations now works regardless
+of the indentation settings (it did not work with custom indentation in
+earlier versions)
+</li><li style="list-style-type: square">
+The preview frame no longer uses the (unmaintained) jEdit Public Domain text area but
+rather a standard <tt class="classname">JEditorPane</tt> with a highlighter dereived from
+the <a href="http://www.bluej.org/" target="_top">BlueJ</a> project (and that highlighter is
+again build upon the jEdit Public Domain syntax package). Users of prior betas may
+savely remove the file <tt class="filename">textarea-2.2.3.jar</tt> from their disks
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e523"></a>1.0 Beta 8 (2002-08-06)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Thanks to Frank Klomp from
+<a href="http://www.informatikatelier.com" target="_top">www.informatikatelier.com</a>
+a Plug-in for Oracle JDeveloper 9i is now available.
+See <a href="./plugins.html" target="_top">Plug-in section</a></li><li style="list-style-type: square">
+Jalopy now comes with a simple project manager to make switching between
+several code conventions easier.
+See <a href="./project.html" target="_top">Project section</a></li><li style="list-style-type: square">
+ConsolePlugin: new option <tt class="literal">--force</tt></li><li style="list-style-type: square">
+The line wrapping for chained method calls now works for nested calls too
+</li><li style="list-style-type: square">
+The settings dialog now comes with a live preview. Requested by Erik Dick
+(<a href="http://sf.net/tracker/?func=detail&amp;aid=563215&amp;group_id=45216&amp;atid=442215" target="_top">#563215</a>)
+</li><li style="list-style-type: square">
+Similar to Jindent, Jalopy is now able to perform variable interpolation for
+the header or footer and Javadoc comment templates.
+See <a href="./environment.html" target="_top">Environment variables</a> section.
+Requested by Erik Dick
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=563213&amp;group_id=45216" target="_top">#563213</a>)
+</li><li style="list-style-type: square">
+Similar to Jindent, you can now define custom Javadoc templates for
+fields, classes/interfaces, constructor and method comments. See
+<a href="./javadoc.html#javadoc-templates" target="_top">Javadoc Templates</a> section
+</li><li style="list-style-type: square">
+The sorting order for the Java modifiers is now configurable. See
+<a href="./sorting.html#sorting-modifier" target="_top">Sorting</a> section
+</li><li style="list-style-type: square">
+The texts for separator comments are now user configurable. See
+<a href="./separation.html#separation-comment" target="_top">Separation</a> section.
+Requested by Dirk Jacobs
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=567322&amp;group_id=45216" target="_top">#567322</a>).
+</li><li style="list-style-type: square">
+The grouping of import statements can now be disabled. See
+<a href="./imports.html#imports-grouping-depth" target="_top">Imports section</a>.
+Requested by Emil A. Lefkof
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=562475&amp;group_id=45216" target="_top">#562475</a>).
+</li><li style="list-style-type: square">
+Lowercase "<tt class="literal">l</tt>" as trailing character for literal
+longs will be automatically capitalized during printing
+</li><li style="list-style-type: square">
+The <tt class="literal">abstract</tt> modifier will be automatically removed if found
+for interface or interface method declarations (as these are implicitly
+<span class="emphasis"><em>abstract</em></span>).
+</li><li style="list-style-type: square">
+You can now specify whether Java sources should be parsed as JDK 1.4 compatible
+(the default) or if sources should be parsed without treating
+<tt class="literal">assert</tt> as a reserved keyword (i.e. JDK 1.3 compatible).
+See the <a href="./settings.html#general-compliance" target="_top">General section</a>.
+This change addresses bugs
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=565512&amp;group_id=45216" target="_top">#565512</a> and
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=576983&amp;group_id=45216" target="_top">#576983</a></li><li style="list-style-type: square">
+The header detection now provides a <span class="emphasis"><em>Smart Mode</em></span> for users
+who want to use singe-line comments for headers. If enabled, Jalopy treats the
+first <tt class="literal">n</tt> number of singe-line comments before the first
+node as part of a header and removes them.
+See the <a href="./header.html#header-smart-mode" target="_top">Header section</a></li><li style="list-style-type: square">
+The element sorting changed: Added was a new category
+<i class="guilabel">Static variables/initializers</i>
+to avoid touching the class initialization as required by the Java language
+specification ("static initializers and class variable initializers are
+executed in textual order"). This partially addresses the feature request
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=545603&amp;group_id=45216" target="_top">#545603</a> also.
+Reported by Kirk Wolf
+</li><li style="list-style-type: square">
+The import optimization feature is now available for the Ant Plug-in too. See
+the <a href="./plugin-ant-usage.html" target="_top">Ant Plug-in</a> chapter
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Setting for <i class="guilabel">Space before Brackets</i> didn't take effect
+</li><li style="list-style-type: square">
+Setting for <i class="guilabel">Space Before Brackets in Types</i> didn't take
+effect for something like <tt class="literal">new String[0]</tt></li><li style="list-style-type: square">
+jEdit Plug-in: The integration with the Gobal Options dialog doesn't suffer
+from the resizing problems anymore
+</li><li style="list-style-type: square">
+jEdit Plug-in: Jalopy directed all formatting messages always to the first view
+</li><li style="list-style-type: square">
+Read-only files don't cause exceptions anymore. Jalopy will now display a
+warning message. Reported by Andrew Barkley
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=587068&amp;group_id=45216" target="_top">#587068</a>)
+</li><li style="list-style-type: square">
+Enclosed creator constructs could lead to uncompilable code. Reported by
+Eddy Kivits
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=586450&amp;group_id=45216" target="_top">#586450</a>)
+</li><li style="list-style-type: square"><tt class="literal">do-while</tt> blocks without enclosing braces where not treated correctly.
+Reported by Marcel Toele
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=581394&amp;group_id=45216" target="_top">#581394</a>)
+</li><li style="list-style-type: square">
+The Javadoc printer missed a blank between the <tt class="literal">@link</tt> tag and
+following HTML links. Reportedy by Brian Harriger
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=581299&amp;group_id=45216" target="_top">#581299</a>)
+</li><li style="list-style-type: square">
+EOL characters were not correctly translated for multi-line, special and
+Javadoc comments. Reportedy by Olivier Mengu&eacute;
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=572130&amp;group_id=45216" target="_top">#572130</a>)
+</li><li style="list-style-type: square">
+Enabling the cuddling of empty braces lead to compilation errors if an
+trailing comment appeared before the opening brace. The cuddling is now disabled
+for such a (rare) case. Reported by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=568974&amp;group_id=45216" target="_top">#568974</a>)
+</li><li style="list-style-type: square">
+NPE during import that only appeared with certain JDKs. Reportedy by Davor Cengija
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=566205&amp;group_id=45216" target="_top">#566205</a>)
+</li><li style="list-style-type: square">
+The insertion of Javadoc comments did not work for classes/interfaces and
+fields (it was not implemented). Reported by Thomas B&ouml;rkel
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=564255&amp;group_id=45216" target="_top">#564255</a>)
+</li><li style="list-style-type: square">
+After importing settings from a distributed location, Jalopy did not use
+these settings if the host was unavailable on successive invocations (but
+rather the build-in defaults); now the imported settings are used and a
+warning message issued. Reported by Thomas B&ouml;rkel
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=563976&amp;group_id=45216" target="_top">#563976</a>)
+</li><li style="list-style-type: square">
+The Java Language Specification requires every single-line comment to be
+terminated by an end-of-line sequence, but Jalopy allowed a single-line-comment
+to be terminated by an end-of-file. Reported by Thomas B&ouml;rkel
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=563974&amp;group_id=45216" target="_top">#563974</a>)
+</li><li style="list-style-type: square">
+Ant 1.4.1 (or earlier) caused problems because of an incompatibility with the
+bundled AElfred parser. Therefore the parser (and all other 3rd party libraries)
+are no longer bundled to enable you to selectively copy the needed libs into
+the Ant <tt class="filename">/lib</tt> folder. Documentation was updated to explain
+the issue. Reported by Larry Hamel et.al.
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=563385&amp;group_id=45216" target="_top">#563385</a>)
+</li><li style="list-style-type: square">
+The Java parser failed for (strange) code like
+<tt class="literal">if (obj.getClass() == (byte.class))</tt>. Reported by Hui Lin
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562681&amp;group_id=45216" target="_top">#562681</a>)
+</li><li style="list-style-type: square"><tt class="literal">try</tt>/<tt class="literal">catch</tt> blocks were not correctly
+formatted (again only with Sun brace style). Reported by Emil A. Lefkof
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562039&amp;group_id=45216" target="_top">#562039</a>)
+</li><li style="list-style-type: square">
+Chained method calls were wrongly wrapped if part of an expression. Reported by Emil A. Lefkof
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562037&amp;group_id=45216" target="_top">#562037</a>)
+</li><li style="list-style-type: square">
+Fixed some bugs regarding (evil) Sun brace styling. Reported by
+Emil A. Lefkof, Thomas B&ouml;rkel, Larry Hamel and Christian Halstrick, Anders Johansson
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562034&amp;group_id=45216" target="_top">#562034</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=564247&amp;group_id=45216" target="_top">#564247</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=569306&amp;group_id=45216" target="_top">#569306</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=569031&amp;group_id=45216" target="_top">#569031</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=580600&amp;group_id=45216" target="_top">#580600</a>)
+</li><li style="list-style-type: square">
+The settings format was not correctly updated between 1.0b6 and 1.0b7
+causing an <tt class="classname">IllegalArgumentException</tt> if the history
+feature was disabled. Reported by Martin Spiller
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=561398&amp;group_id=45216" target="_top">#561398</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=561675&amp;group_id=45216" target="_top">#561675</a>)
+</li><li style="list-style-type: square">
+As the comment preserving/printing implementation has been rewritten, trailing
+comment support should now work in nearly all cases. At least all reported
+issues are now treated correctly. Reported by Stephane Houle, Emil A. Lefkof,
+Kees Kuip, John Wilson
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559222&amp;group_id=45216" target="_top">#559222</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=565820&amp;group_id=45216" target="_top">#565820</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562034&amp;group_id=45216" target="_top">#562034</a>,
+<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=578664&amp;group_id=45216" target="_top">#578664</a>)
+</li><li style="list-style-type: square">
+The user selected brace style did not take effect for anonymous inner classes.
+Reported by Ian Brown
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=545431&amp;group_id=45216" target="_top">#545431</a>)
+</li><li style="list-style-type: square">
+Fixed a minor GUI bug in the Javadoc panel (column headers did not show up
+using Windows L&amp;F). Reported by Thomas Sauzedde
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=544404&amp;group_id=45216" target="_top">#544404</a>)
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+JBuilder Plug-in: it now checks whether the classpath is correctly set up
+(whether all defined libraries exist) and if something seems to be broken,
+the import optimization feature is enabled to avoid errors (a dialog appears to
+inform you about the misconfiguration)
+</li><li style="list-style-type: square">
+JBuilder Plug-in: the <span><b class="guimenuitem">Jalopy Options...</b></span> menu item now
+appears in the Options group of the
+<span><b class="guimenu"><span class="accel">T</span>ools</b></span> menu.
+</li><li style="list-style-type: square">
+jEdit Plug-in: the Plug-in does not use ErrorList anymore, but rather relies
+on the MessageView Plug-in which is bundled with the distribution (as it is not
+yet available through the jEdit Plugin Central)
+</li><li style="list-style-type: square">
+The sorting logic for variable declarations now compares by access modifiers first,
+then (new!) type name and only if these two are equal by name (identifier)
+</li><li style="list-style-type: square">
+The Javadoc printer now inserts a newline after every found &lt;br&gt; tag
+(only happens if Javadoc parsing is enabled). This addresses the "Bug"
+reported by Tony Falabella (that was no bug but rather the behaviour I found
+sufficient)
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=562502&amp;group_id=45216" target="_top">#562502</a>)
+</li><li style="list-style-type: square">
+The default setting for the backup level changed, it is now set to "0"
+(no backups are kept)
+</li><li style="list-style-type: square">
+The settings dialog is no longer a modal dialog (necessary for the live preview)
+</li><li style="list-style-type: square">
+Started from the command line, the settings dialog now appears in the task
+bar (under Win32). Suggested by Knut Wannheden
+</li><li style="list-style-type: square">
+The bundled ANTLR runtime has been repackaged to avoid versioning problems
+</li><li style="list-style-type: square">
+Apart from the ANTLR runtime, the binary distributions no longer bundle the
+needed 3rd party libraries. Thus the installation procedure for some Plug-ins
+requires more care: you have to manually remove outdated 3rd party libraries
+before you copy the <tt class="filename">.jars</tt> provided with Jalopy into the
+Plug-in/module folder of your application (Applies to Ant, Console, JBuilder
+ and jEdit, if done manually)
+</li><li style="list-style-type: square">
+Some shipped 3rd party jars we're updated: log4j to 1.2.6, Oro to 2.0.6,
+JAXP to 1.2.
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e835"></a>1.0 Beta 7 (2002-05-26)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The wrapping behaviour for throws clauses is now more configurable. See
+<a href="./wrapping.html#wrap-before-throws" target="_top">Wrapping section</a>.
+Requested by Stephane Houle
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=559222&amp;group_id=45216" target="_top">#559222</a>)
+</li><li style="list-style-type: square">
+Indentation for <tt class="classname">extends</tt>, <tt class="classname">implements</tt>
+and <tt class="classname">throws</tt> can now be specified explicitly. See
+<a href="./indentation.html#indentation-sizes" target="_top">Indentation section</a></li><li style="list-style-type: square">
+Chained method calls are now wrapped (if line wrapping is enabled, of course).
+You can either force wrapping after every call
+(Refer to the <a href="./wrapping.html#wrap-call-chained" target="_top">Wrapping section</a>)
+or let wrapping happen automatically. Requested by Stephane Houle
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442215&amp;aid=559222&amp;group_id=45216" target="_top">#559222</a>)
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Sometimes stdin was not formatted. Reported and fixed by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559503&amp;group_id=45216" target="_top">#559503</a>)
+</li><li style="list-style-type: square">
+1.0b6 failed to work with JDK 1.3.0 due to a bug in the handling of the index
+list <tt class="filename">.jar</tt> entry. Ant 1.5beta1 named it "INDEX.LIST" but this JDK expects "Index.list"
+which in turn lead to classloading problems.
+Reported by Steve Bromley
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559704&amp;group_id=45216" target="_top">#559704</a>)
+and Joel Alaux
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559240&amp;group_id=45216" target="_top">#559240</a>)
+</li><li style="list-style-type: square">
+Console Plug-in: Parsing a non-valid Java file with stdin always resulted in an
+exitcode "0". It now returns "1" in such cases. Reported by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=560709&amp;group_id=45216" target="_top">#560709</a>)
+</li><li style="list-style-type: square">
+The file history failed to work (because of an initialization error)
+</li><li style="list-style-type: square">
+The wrapper scripts for the Console Plug-in failed to work (I forgot to rename
+the startup class that has changed in 1.0b6). Reported by Ronen Rotstain
+</li><li style="list-style-type: square">
+The JBuilder Plug-in is now compatible with jVI. Reported by Rich Kadel
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559761&amp;group_id=45216" target="_top">#559761</a>)
+</li><li style="list-style-type: square">
+Javadoc tags were (intensionally) only printed if the Javadoc comment belonged to a class/interface or
+method/ctor declaration. Reported by Tony Falabella
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=559357&amp;group_id=45216" target="_top">#559357</a>)
+</li><li style="list-style-type: square">
+Specifying a relative file as input source could lead to a file loss in case
+of RuntimeExceptions during the processing and a backup level of "0".
+Reported by Kees Kuip
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=558353&amp;group_id=45216" target="_top">#558353</a>)
+</li><li style="list-style-type: square">
+The NetBeans module failed to function properly due to a wrong Manifest <tt class="filename">.jar</tt> entry. Reported by Nico Max and Davide Baroncelli
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=558560&amp;group_id=45216" target="_top">#558560</a>)
+</li><li style="list-style-type: square">
+If <i class="guilabel">Space around Shift operators</i> was disabled, Jalopy failed to
+add whitespace around the <tt class="classname">instanceof</tt> operator. Reported by Roger Kemp
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=558482&amp;group_id=45216" target="_top">#558482</a>)
+</li><li style="list-style-type: square">
+Fixed a small but annoying bug regarding the alignment of assignments. Reported by GilloS
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=558638&amp;group_id=45216" target="_top">#558638</a>)
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The detection logic for debug logging calls has been slightly improved. Calls like
+<tt class="literal">Configuration.debug()</tt> won't be treated as logging calls anymore
+</li><li style="list-style-type: square">
+The custom Javadoc tag definitions are not stored in distinct files anymore but
+rather go into the settings file (to make it portable across system bounderies)
+</li><li style="list-style-type: square">
+The Ant task attribute handling changed: if you omit any optional attribute now the
+corresponding settings settings will be used for *all* attributes
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e953"></a>1.0 Beta 6 (2002-05-19)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Thanks to Roman Sarychev, Jalopy now provides the ability to import/export
+settings in an <tt class="filename">.XML</tt> format
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442215&amp;aid=549177&amp;group_id=45216" target="_top">#549177</a>)
+</li><li style="list-style-type: square">
+Jalopy is now able to keep original blank lines. See <a href="./separation.html#separation-misc-keep" target="_top">Separation section</a> for details
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442215&amp;aid=555914&amp;group_id=45216" target="_top">#555914</a>)
+</li><li style="list-style-type: square">
+Modifiers of declarations can now be sorted. See <a href="./sorting.html#sorting-general-modifiers" target="_top">Sort section</a> for details
+</li><li style="list-style-type: square">
+You can now enable the auto-insertion of an enclosing conditional for logging calls. See <a href="./misc.html#misc-logging-conditional" target="_top">Misc section</a> for details. Requested by Larry Hamel
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442215&amp;aid=550336&amp;group_id=45216" target="_top">#550336</a>)
+</li><li style="list-style-type: square">
+Parameters of method definitions can now be aligned. See <a href="./indentation.html#indentation-align-params" target="_top">Indentation section</a>. Requested by Gary Bentley
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442215&amp;aid=551205&amp;group_id=45216" target="_top">#551205</a>)
+</li><li style="list-style-type: square">
+The default grouping depth is now user configurable. See <a href="./imports.html#imports-grouping" target="_top">Imports section</a>. Requested by Larry Hamel
+</li><li style="list-style-type: square">
+Added new options (before and after curly braces, blocks...) to customize the blank lines behaviour. See <a href="./separation.html" target="_top">Separation section</a></li><li style="list-style-type: square">
+You can now print a blank between array type and initializer. Requested by David Weitzman
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442215&amp;aid=548888&amp;group_id=45216" target="_top">#548888</a>)
+</li><li style="list-style-type: square">
+Jalopy is now able to load its settings from an Internet address. Refer to the
+<a href="./settings.html#general" target="_top">General section</a> of the manual. Cool feature requested by Sven van't Veer
+</li><li style="list-style-type: square">
+You can now use stdin/stdout redirection from the command line. If no input
+file(s) are specified, Jalopy will start listening on stdin. Note that the
+command line interface is now only available via the Console Plug-in! See
+<a href="./plugin-console-usage.html#plugin-console-usage-example" target="_top">Examples section</a></li><li style="list-style-type: square">
+For array initializers you can now force a specfic number of elements to be
+printed on each line or whether all elements should be printed on one line.
+See <a href="./wrapping.html#wrap-misc-arrays" target="_top">Wrapping section</a></li><li style="list-style-type: square">
+Eclipse Plug-in: the Packages view context menu now contains a formatting menu item
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Eclipse Plug-in: Fixed a bug in the shutdown hook. Only occurred if one had not
+formatted several files at once during a session. Reported by Eric Vickery
+</li><li style="list-style-type: square">
+Multi-line comments were not printed correctly if parsing of multi-line comments was
+disabled and the individual lines not starting with a leading asterix. Reported by Tony Falabella
+(<a href="http://sf.net/tracker/?func=detail&amp;atid=442212&amp;aid=554141&amp;group_id=45216" target="_top">#554141</a>)
+</li><li style="list-style-type: square">
+Javadoc generation failed if <i class="guilabel">Parse/Format tags</i> was disabled. Reported by Gary Bentley
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=551194&amp;group_id=45216" target="_top">#551194</a>)
+</li><li style="list-style-type: square">
+Serial version UID check box didn't save. Reported by Kevin Duffey
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=551604&amp;group_id=45216" target="_top">#551604</a>)
+</li><li style="list-style-type: square">
+Formatting an opened file with one of the Plug-ins did not create a backup file. Reported by Warren Nicholls
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=545077&amp;group_id=45216" target="_top">#545077</a>)
+</li><li style="list-style-type: square">
+Custom Javadoc tag definitions are now loaded correctly and thus working. Reported by Arnd Empting
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=547028&amp;group_id=45216" target="_top">#547028</a>)
+</li><li style="list-style-type: square">
+Fixed an trailing comment bug for the Sun brace styling. Reported by Martin Spiller
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=545616&amp;group_id=45216" target="_top">#545616</a>)
+</li><li style="list-style-type: square">
+Eclipse Plug-in: After formatting the active editor, the IBeam cursor was not
+restored but rather the default cursor showed up
+</li><li style="list-style-type: square">
+Line wrapping for while and do-while expression parts now working (I forgot the markers)
+</li><li style="list-style-type: square">
+Fixed a blank lines issue for singe-line comments (printed one extra behind
+left curly braces, this is now user configurable)
+</li><li style="list-style-type: square">
+Fixed another blank lines issue for the Sun brace style (missed one blank
+line between blocks. Reported by Bradley Smith
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=545941&amp;group_id=45216" target="_top">#545941</a>,
+<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=544459&amp;group_id=45216" target="_top">#544459</a>)
+</li><li style="list-style-type: square">
+EOF comments weren't always treated correctly (in case of singe-line comments). Reported by Ian Brown
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=544706&amp;group_id=45216" target="_top">#544706</a>)
+</li><li style="list-style-type: square">
+jEdit Plug-in: Updated to work with 4.0 final. It now won't work with any prior release
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=544100&amp;group_id=45216" target="_top">#544100</a>)
+</li><li style="list-style-type: square">
+NetBeans Plug-in: fixed a build problem causing the <tt class="filename">.nbm</tt>
+file to be missing in the distro archive. Reported by Brian Ewins
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=544162&amp;group_id=45216" target="_top">#544162</a>)
+</li><li style="list-style-type: square">
+Fixed a minor bug in the JavadocPrinter regarding the printing of lists
+</li><li style="list-style-type: square">
+Footers were always removed no matter whether enabled or disabled
+</li><li style="list-style-type: square">
+Left curly brace for array initialization expression now regards the selected brace style
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The license terms have changed. The core runtime and most of the Plug-ins are now
+released under the <a href="license-bsd.html" target="_top">BSD license</a>.
+Due to license restrictions of a 3rd party library,
+the command line interface has been removed from *<span class="bold"><b>ALL</b></span>*
+distributions and a new Plug-in was created: the Console Plug-in.
+</li><li style="list-style-type: square">
+JBuilder Plug-in: switching project does not bring up a blocking progress dialog
+anymore. The class repository is loaded in a background thread
+</li><li style="list-style-type: square">
+All file dialogs are not opened directly anymore but are accessible via an
+intermediate component that provides a history
+</li><li style="list-style-type: square">
+Eclipse Plug-in: Updated the <tt class="filename">plugin.xml</tt> to work with the
+latest stable build (20020416). This change only regards the menu item to
+invoke the Jalopy settings dialog; this item now appears under the 'Window'
+menu as the 'Workbench' menu has been gone
+</li><li style="list-style-type: square">
+The Javadoc parser now recognizes &lt;br/&gt; as a valid HTML tag
+(<a href="http://sf.net/tracker/index.php?func=detail&amp;atid=442212&amp;aid=547028&amp;group_id=45216" target="_top">#547028</a>)
+</li><li style="list-style-type: square">
+The Javadoc parser now checks whether any custom tag definition was added/removed
+since the last run and therefore needs reloading
+</li><li style="list-style-type: square">
+Specifying an empty string input via Jalopy#setInput(String, String) no longer
+throws <tt class="classname">IllegalArgumentException</tt>, instead the input is
+handled like an up-to-date file
+</li><li style="list-style-type: square"><span><b class="guibutton">Load...</b></span> and <span><b class="guibutton">Save...</b></span> buttons on the
+General settings page has been renamed
+to <span><b class="guibutton">Import...</b></span> and <span><b class="guibutton">Export...</b></span></li><li style="list-style-type: square">
+Changed the comment handling of labeled statements: if the following loop had
+comments before, these were printed before the labeled statement, now they will
+be printed before the loop statement
+</li><li style="list-style-type: square">
+The build scripts has been updated to use Ant 1.5beta1 features. Prior Ant
+releases won't work anymore
+</li><li style="list-style-type: square">
+Updated the bundled log4j distribution to 1.2.1. Adopted the new naming scheme
+and renamed all <tt class="classname">Category</tt> and <tt class="classname">Priority</tt>
+instances. Note that 1.2 is *no* drop-in replacement (no matter what the log4j docu says)
+as they renamed a public (sic!) field I have to use
+</li><li style="list-style-type: square">
+jEdit Plug-in: The menu item to display the Jalopy settings dialog can now
+be added to the context menu
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1163"></a>1.0 Beta 5 (2000-04-14)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square"><tt class="classname">AbstractPlugin.java</tt> now comes with multi-processor
+support, so all IDE Plug-ins should operate faster on multi-processor machines.
+Refer to the <a href="misc.html#misc-threads" target="_top">Misc</a> section of the
+manual
+</li><li style="list-style-type: square">
+Ant Plug-in: Added multi-processor support, new parameter <i class="parameter"><tt>threads</tt></i> to specify
+the number of threads to use
+</li><li style="list-style-type: square">
+Declaration and assignments aligning now available. Refer to the
+<a href="indentation.html#indentation-align-ident" target="_top">Indentation</a> section of the
+manual
+</li><li style="list-style-type: square">
+Separation (blank lines) behaviour now configurable. Refer to the
+<a href="separation.html" target="_top">Separation</a> section of the manual
+</li><li style="list-style-type: square">
+Added Eclipse Plug-in (needs Eclipse 2.0)
+</li><li style="list-style-type: square">
+Jalopy now supports the common convention of using a single @see tag
+instead of all the other tags and won't insert any missing Javadoc tags in such
+cases. Same applies if the inline tag {@inheritDoc} is found in the description
+</li><li style="list-style-type: square">
+Work started to provide an extended index for the user manual.
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Javadoc add/remove didn't work for @return tag
+</li><li style="list-style-type: square">
+The editable combo boxes (<tt class="classname">NumberComboBoxEditor.java</tt>)
+caused exceptions on losing focus
+</li></ul></div><p></p></li><li>
+Changes
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Javadoc now also generated for methods/ctors without params.
+</li><li style="list-style-type: square">
+Ant Plug-in: Changed the configuration of the message output. It is
+now controlled by a single parameter <i class="parameter"><tt>loglevel</tt></i>. This may
+force you to update your build scripts. Refer to the
+<a href="plugin-ant-usage.html#tab-ant-params" target="_top">Ant section</a>
+of the manual to read about the list of valid parameters
+</li><li style="list-style-type: square">
+The source base has been split into different modules (to make CVS happy and
+life easier) and the build system has changed accordingly
+</li><li style="list-style-type: square">
+The website and all documentation is now auto-generated out of <tt class="filename">.XML</tt> files
+(using the Ant style task and DocBook XSL 1.50.0/Saxon 6.5.1)
+</li><li style="list-style-type: square">
+The entries of the history viewer are now sorted
+</li><li style="list-style-type: square">
+The web site has a new look
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1235"></a>1.0 Beta 4 (2000-03-20)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Jalopy now provides some decent user documentation. Many thanks to Larry
+Hamel for the proof-reading
+</li><li style="list-style-type: square">
+The line wrapping logic is now fully implemented
+</li><li style="list-style-type: square">
+New line wrapping option: You can now force the wrapping for parameter
+lists of method calls. Note that this switch only applies to those lists
+that contain another method call. Refer to the
+<a href="wrapping.html#wrap-always" target="_top">Wrap always</a> section of the manual.
+Nice feature suggested by David Beutel
+</li><li style="list-style-type: square">
+Continuation indentation is now available for ternary if-else epressions
+too. Refer to the
+<a href="indentation.html#indentation-misc-ternary-if-else" target="_top">Indentation</a> section of the manual
+</li><li style="list-style-type: square">
+New option: You can now specify whether you want indentation realized
+with tabs instead of spaces. Refer to the
+<a href="indentation.html#indentation-misc-tab" target="_top">Indentation</a> section of the manual.
+This feature was kindly donated by David Beutel
+</li><li style="list-style-type: square">
+The history feature is now more user configurable. You can specifiy
+whether you want to have it enabled at all and what policy you want to
+use. Choose between the comment based history (which inserts a small
+header on top of every file) or a file-driven history. Refer to the
+<a href="misc.html#misc-history" target="_top">Indentation</a> section of the manual.
+The history feature is now *disabled* by default
+</li><li style="list-style-type: square">
+Added two new wrapping options: <i class="guilabel">Before extends keyword</i> and
+<i class="guilabel">Before implements keyword</i>. Enabling any of them will force
+a newline before the given keyword. Refer to the
+<a href="wrapping.html#wrap-always" target="_top">Wrap always</a> section of the manual.
+Requested by John Bishop
+</li><li style="list-style-type: square">
+New option to control the printing of labels. You can now specify whether
+a line break should be printed after labels or not. Refer to the
+<a href="wrapping.html#wrap-always-label" target="_top">Wrap always</a> section of the manual
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Small bugfix regarding trailing comments and array initialization
+</li><li style="list-style-type: square">
+Line wrapping for parameter lists was always performed, no matter what
+preference setting given
+</li><li style="list-style-type: square">
+For ternary if-else statements, parentheses was always inserted for the
+expression part if <i class="guilabel">Insert parentheses around expressions</i> was enabled.
+Now parentheses are only inserted if actually needed
+</li><li style="list-style-type: square"><i class="guilabel">Indent labels</i> option didn't show up on the indentation settings page
+</li><li style="list-style-type: square">
+The Javadoc auto-generation facility no longer inserts @throws tags for throws
+clauses that are catched in the method body
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Settings pages <i class="guilabel">Braces</i> and <i class="guilabel">Block style</i>
+now merged into one page <i class="guilabel">Braces</i> with two tabs
+<i class="guilabel">Style</i> and <i class="guilabel">Misc</i></li><li style="list-style-type: square"><span><b class="guibutton">Cancel</b></span> button of the Progress monitor dialog renamed to
+<span><b class="guibutton">Stop</b></span> to reflect the fact that some files might have changed
+</li><li style="list-style-type: square">
+Settings page <i class="guilabel">Javadoc</i> cleaned up
+</li><li style="list-style-type: square">
+Specifying an identify key to delete existing headers/footers is now
+enforced
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1336"></a>1.0 Beta 3 (2000-03-10)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+New option: You can now specify whether you want to retain first column
+comments vs. indenting them relative to their position in the code. Refer to the
+<a href="indentation.html#indentation-misc-first-column" target="_top">Indentation</a> section of the manual
+</li><li style="list-style-type: square">
+New option: You can now use different brace styles for class/method
+blocks and other types of blocks (for Sun, GNU and Custom style)
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The Javadoc parser rework lead to an error with the Javadoc @throws tags
+verification. This has been fixed now (Actually only a build problem)
+</li><li style="list-style-type: square">
+If <i class="guilabel">Space before Case colon</i> was enabled, no space was printed for
+the default keyword
+</li><li style="list-style-type: square">
+The comment creation only worked if the comment parsing and tag checking
+was enabled too
+</li><li style="list-style-type: square">
+Formatting a non-file input produced wrong updates of the history header
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+The line-wrapping logic changed/improved somewhat
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1372"></a>1.0 Beta 2 (2002-03-05)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Custom Javadoc tag definitions now available
+</li><li style="list-style-type: square">
+New option: You can now choose whether you want an empty statement
+inserted into empty braces to make the intension obvious
+</li><li style="list-style-type: square">
+New option: You can now specify whether if-statements should generally use
+continuation indent. This option was added to address the fact that
+conventional indentation could make seeing the body difficult (as outlined
+in the Sun Java Conventions guide)
+</li><li style="list-style-type: square">
+New option: Line wrapping can now be performed before or after operators
+</li><li style="list-style-type: square">
+New option: You can now specify template texts for auto-inserted Javadoc tags.
+</li><li style="list-style-type: square">
+NetBeans Plug-in added (for NetBeans 3.3.1 and higher)
+</li><li style="list-style-type: square">
+jEdit Plug-in: updated to work with jEdit 4.0prev1 and higher
+</li><li style="list-style-type: square">
+JBuilder Plug-in: added the Format and Settings actions to the popup
+menu of the editor pane
+</li><li style="list-style-type: square">
+Ant Plug-in: new parameter <i class="parameter"><tt>style</tt></i> to set the settings file to use
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Fixed a bug regarding the wrong printing of parenthesis for certain
+rare cases
+</li><li style="list-style-type: square">
+Correction of mispelled Javadoc standard tags failed if the correct
+amount of tags was given for the method/ctor
+</li><li style="list-style-type: square">
+No space was printed after array elements for arrays that fit in
+one line
+</li><li style="list-style-type: square">
+Printing of trailing comments now works much more reliable
+</li><li style="list-style-type: square">
+No message was reported in case the user specified an invalid input file
+on the command line
+</li><li style="list-style-type: square">
+Progress dialog didn't show progress for files with an opened editor view
+</li><li style="list-style-type: square">
+If no arguments were given on the command line, no warning was printed.
+Now the usage notes will appear
+</li><li style="list-style-type: square">
+Fixed a horrible bug in the JBuilder Plug-in which caused wrong class
+repository updates if one switched JDKs
+</li><li style="list-style-type: square">
+Fixed an error in the initialization process of the logging facility for
+Plug-ins using the AbstractPlugin skeleton which hindered the updating
+of the errors/warnings count in the progress dialog
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+All Plug-ins now only available as bundles. This will certainly pertain
+until a branding mechanism is available to check whether a given Plug-in
+will work with a given Jalopy runtime (a la NetBeans?)
+</li><li style="list-style-type: square">
+Changed/refactored some method signatures in the client API for consistency
+and ease of use
+</li><li style="list-style-type: square">
+The Javadoc parser has been reworked to allow both custom standard and
+inline tags
+</li><li style="list-style-type: square">
+Some API documentation enhancements, updated the build script to only generate
+the documentation for the public client API, removed the documentation for the
+Plug-ins from the distribution Javadoc
+</li><li style="list-style-type: square">
+Moved the logic to set the settings file to use, from the command line
+interface into <tt class="classname">Jalopy.java</tt> to let Plug-ins easily set the settings file
+to use
+</li><li style="list-style-type: square">
+Updated the used ANTLR version to 2.7.2a2. Compiled with optimizations and
+without debugging info results in smaller archive sizes
+</li><li style="list-style-type: square">
+Many build-script improvements. It should now be possible to build a
+Jalopy runtime version without the need of Plug-in related 3rd-party
+libraries
+</li><li style="list-style-type: square">
+The Jalopy runtime classes and all needed library classes are now bundled
+into one .jar
+</li><li style="list-style-type: square">
+The customizer mini editor is no longer part of the runtime .jar
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1448"></a>1.0 Beta 1 (2002-02-13)</h2></div></div><div></div></div><div class="orderedlist"><ol type="i"><li>
+New Features
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+jEdit Plug-in added (for jEdit 3.2.2)
+</li><li style="list-style-type: square">
+The progress dialog now includes a cancel button
+</li></ul></div><p></p></li><li>
+Bugfixes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Settings dialog did not close when invoked on the command line
+with <span><b class="command">java Preferences</b></span></li><li style="list-style-type: square">
+Error in build script fixed (JavadocTokenTypes.txt now included in
+the .jars) to make the Javadoc auto-correction work
+</li><li style="list-style-type: square">
+Braces indentation not printed for left curly braces
+</li><li style="list-style-type: square">
+JBuilder Plug-in: Registered directories need to be reparsed on
+every startup for the import expansion/collapsing to work reliably
+</li></ul></div><p></p></li><li>
+Changes
+
+<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+Changed default package depth for packages java, javax, gnu in the
+settings (former was 3, now uses 2)
+</li><li style="list-style-type: square">
+Changed the SwingWorker implementation to the one found in Doug Lea's
+<tt class="classname">util.concurrent</tt> package, refactored <tt class="classname">AbstractPlugin.java</tt>
+to use an inner class dereived from <tt class="classname">SwingWorker.java</tt>
+instead of extending <tt class="classname">SwingWorker.java</tt> itself
+</li><li style="list-style-type: square">
+Formatting a single file doesn't bring up the progress dialog anymore, but
+rather shows the system wait cursor and blocks all input
+</li><li style="list-style-type: square">
+Removed the Javadoc documentation from the Plug-in distributions
+</li></ul></div><p></p></li></ol></div></div><div class="simplesect" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d35e1498"></a>Initial beta version (2002-02-10)</h2></div></div><div></div></div></div></div></td></tr><tr><td height="20"></td></tr></tbody></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2002, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

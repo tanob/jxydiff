@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE foo [
+<!ELEMENT foo ANY>
+<!ATTLIST foo bar (one|one) #IMPLIED>
+]>
+<foo/>
+

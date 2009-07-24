@@ -1,0 +1,15 @@
+:build$
+:src:fr:loria:ecoo:so6:antlr:XML.*\.java$
+:doc$
+:\.clover$
+:bin$
+:test-report$
+:velocity\.log$
+:build\.properties$
+:junit.*\.properties$
+:\.project$
+:\.classpath$
+.*\.DS_Store$
+.*\.class$
+.*\.fdb$
+.*~$

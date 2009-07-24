@@ -1,0 +1,89 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Jalopy - FAQ</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><meta name="keywords" content="Java, convention, source, code, formatter, beautifier, pretty, printer, format, beautify, layout, coding, open, style, standard, transform, parser, Sun, ANTLR, Ant, Eclipse, JBuilder, NetBeans, jEdit, jakarta, JDeveloper, generator, generation, JDE, maven">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="center"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                        <a href="./history.html" class="navlink2">History</a> |
+                        <a href="./manual.html" class="navlink2">Manual</a> |
+                        <a href="./faq.html" class="navlink2">FAQ</a> |
+                        <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr></tbody></table></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+            This page generated: <strong>June 8 2004</strong></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td><div class="article" lang="en"><div class="simplesect" lang="en"><div class="titlepage"><div></div><div></div></div><div class="qandaset"><table border="0" summary="Q and A Set"><col align="left" width="1%"><tbody><tr class="question"><td align="left" valign="top"><a name="d21e76"></a><a name="report-bugs"></a><b>Q:</b></td><td align="left" valign="top"><p>
+How do I report a bug I have found in Jalopy?
+</p></td></tr><tr class="answer"><td align="left" valign="top"><b>A:</b></td><td align="left" valign="top"><p>
+To be as helpful as possible to the Jalopy developer team and other users, you should use
+the <a href="http://sf.net/tracker/?group_id=45216&amp;atid=442212" target="_top">
+bug tracker database</a> that the Jalopy project maintains on the
+<a href="http://sf.net/" target="_top">SourceForge web site</a>. You do need to be a SourceForge
+member to post a bug report.
+</p><p>
+Before posting a bug report, spend a few moments searching the bug database to see if a
+similar report has already been made. The bug tracker has a search facility that will let
+you search for bug reports using a variety of criteria. If you find a similar bug report,
+and you have additional information to contribute, post a comment to the report. Only if
+you do not find a similar bug report, submit a new one.
+</p></td></tr><tr class="question"><td align="left" valign="top"><a name="d21e91"></a><a name="bug-report"></a><b>Q:</b></td><td align="left" valign="top"><p>
+What information should I include in a bug report?
+</p></td></tr><tr class="answer"><td align="left" valign="top"><b>A:</b></td><td align="left" valign="top"><p>
+The web form in the bug tracker report provides several fields for
+submitting information. If you are unsure about a particular
+item, leave it at the default setting provided in the form.
+</p><p>
+The more important fields are &#8220;<span class="quote">Category</span>&#8221;,
+&#8220;<span class="quote">Summary</span>&#8221; and the &#8220;<span class="quote">Initial comment</span>&#8221;.
+</p><p>
+When you write your initial comment describing the bug, you
+should specify the versions of Jalopy, the Plug-in environment, the Java platform and
+operating system you are using.
+</p><p>
+Be as specific as possible. If you encounter stack traces, attach them. If you have
+problems formatting a specific file, locate the cause of the error and attach
+the code section as a text file. Also attach your code convention as many errors only
+occur with a certain settings combination.
+</p><p>
+A more typical example should look like:
+</p><div class="informalexample"><a name="ex-bug-report"></a><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+I newly installed jalopy-1.0b9 on Windows NT with German locales, Sun JDK 1.3.1_05.
+I upgraded property file from jalopy-1.0b7 via Import/Export.
+
+When starting the jalopy settings dialog, I always have problems
+when I am on the "Sorting" panel. No entries are shown. Maybe
+this is a similar problem.
+
+I tried with different files. Always the same result.
+
+Using the Ant task (0.3.3 with Ant 1.4.1), I get a stack trace as attached. I attached
+my code convention also.
+</pre></td></tr></table></div><p>
+The attached stack trace could read as follows:
+</p><div class="informalexample"><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+[jalopy] Jalopy Java Source Code Formatter 1.0b9
+[jalopy] Format 1 source file
+[jalopy] X:\beans\booking\BookingService.java:0:0:
+Parse
+[jalopy] X:\beans\booking\BookingService.java:0:0:parsing took 170
+[jalopy] X:\beans\booking\BookingService.java:0:0:transform
+[jalopy] X:\beans\booking\BookingService.java:0:0:
+java.lang.NullPointerException
+[jalopy] java.lang.NullPointerException
+at de.hunsicker.jalopy.lang.Transformation.addSiblings(Transformation.java:167)
+at de.hunsicker.jalopy.lang.Transformation.sortDeclarations(Transformation.java:534)
+at de.hunsicker.jalopy.lang.Transformation.sort(Transformation.java:104)
+at de.hunsicker.jalopy.lang.Transformation.apply(Transformation.java:64)
+at de.hunsicker.jalopy.lang.JavaRecognizer.transform(JavaRecognizer.java:451)
+at de.hunsicker.jalopy.lang.JavaRecognizer.getParseTree(Java Recognizer.java:173)
+</pre></td></tr></table></div><p>
+The given information made it quite obvious that the auto-conversion of the code
+convention format from 1.0b7 to 1.0b9 failed for some reason.
+</p><p>
+Looking further at the supplied code convention revealed that the value of the sorting
+key was invalid and the actual cause was easy to spot.
+</p></td></tr></tbody></table></div></div></div></td></tr><tr><td height="20"></td></tr></tbody></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2002, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

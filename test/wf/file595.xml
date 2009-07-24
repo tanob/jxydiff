@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+<!ELEMENT root EMPTY>
+    <!-- in case parsers special-case builtin entities incorrectly -->
+]>
+<root>&amp;</root>
+

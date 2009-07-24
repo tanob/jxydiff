@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc
+[
+<!ENTITY % pe "<!--replacement decl-->">
+<!ENTITY % pe2 SYSTEM "nop.ent">
+]>
+<doc/>

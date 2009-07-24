@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE root 
+[
+<!ELEMENT root (#PCDATA)>
+<!--* recursive PE reference -->
+<!ENTITY % paaa "&bbb;">
+<!ENTITY bbb "%paaa;">
+]>
+<root/>

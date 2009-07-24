@@ -1,0 +1,170 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>4.4.&nbsp;Code Inspector</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><link rel="home" href="manual.html" title="Jalopy User Manual"><link rel="up" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="previous" href="misc.html" title="4.3.13.&nbsp;Misc"><link rel="next" href="inspector-naming.html" title="4.4.2.&nbsp;Naming"><link rel="preface" href="dedication.html" title="Dedication"><link rel="preface" href="acknowledge.html" title="Acknowledgements"><link rel="preface" href="introduction.html" title="Introduction"><link rel="part" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="chapter" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="chapter" href="build.html" title="Chapter&nbsp;2.&nbsp;Building"><link rel="chapter" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="chapter" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="part" href="part-plugins.html" title="Part&nbsp;II.&nbsp;Plug-ins"><link rel="chapter" href="plugin-ant.html" title="Chapter&nbsp;5.&nbsp;Ant Plug-in task"><link rel="chapter" href="plugin-console.html" title="Chapter&nbsp;6.&nbsp;Console Application"><link rel="chapter" href="plugin-eclipse.html" title="Chapter&nbsp;7.&nbsp;Eclipse Plug-in"><link rel="chapter" href="plugin-jbuilder.html" title="Chapter&nbsp;8.&nbsp;JBuilder OpenTool"><link rel="chapter" href="plugin-jdev.html" title="Chapter&nbsp;9.&nbsp;JDeveloper Extension"><link rel="chapter" href="plugin-jedit.html" title="Chapter&nbsp;10.&nbsp;jEdit Plug-in"><link rel="chapter" href="plugin-netbeans.html" title="Chapter&nbsp;11.&nbsp;NetBeans/Sun ONE Studio module"><link rel="appendix" href="dependencies.html" title="Appendix&nbsp;A.&nbsp;Library Dependencies"><link rel="appendix" href="license-bsd.html" title="Appendix&nbsp;B.&nbsp;The Jalopy BSD License"><link rel="appendix" href="license-antlr.html" title="Appendix&nbsp;C.&nbsp;ANTLR SOFTWARE RIGHTS"><link rel="appendix" href="license-apache.html" title="Appendix&nbsp;D.&nbsp;The Apache Software License, Version 1.1"><link rel="appendix" href="license-gnu.html" title="Appendix&nbsp;E.&nbsp;GNU GENERAL PUBLIC LICENSE Version 2, June 1991"><link rel="appendix" href="license-gnu-doc.html" title="Appendix&nbsp;F.&nbsp;GNU Free Documentation License Version 1.1, March 2000"><link rel="appendix" href="license-common-public.html" title="Appendix&nbsp;G.&nbsp;Common Public License Version 1.0"><link rel="appendix" href="license-sun-public.html" title="Appendix&nbsp;H.&nbsp;SUN PUBLIC LICENSE Version 1.0"><link rel="index" href="ix01.html" title="Index"><link rel="subsection" href="inspector.html#d0e5095" title="4.4.1.&nbsp;General"><link rel="subsection" href="inspector-naming.html" title="4.4.2.&nbsp;Naming">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="left"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                    <a href="./history.html" class="navlink2">History</a> |
+                    <a href="./manual.html" class="navlink2">Manual</a> |
+                    <a href="./faq.html" class="navlink2">FAQ</a> |
+                    <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+                    This page generated: <strong>June 8 2004</strong></td></tr></tbody></table><table border="0" width="100%" cellspacing="0" cellpadding="5"><tr><td><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.4.&nbsp;Code Inspector</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="misc.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;4.&nbsp;Settings</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="inspector-naming.html">Next</a></td></tr></table><hr></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="inspector"></a>4.4.&nbsp;Code Inspector</h2></div></div><div></div></div><a class="indexterm" name="d0e5090"></a><p>
+Provides the configuration facility for the Jalopy Code Inspector. The Code Inspector is
+able to inspect Java source files for naming convention violations and possible code
+weaknesses.
+</p><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e5095"></a>4.4.1.&nbsp;General</h3></div></div><div></div></div><p>
+Lets you control the general Code Inspector settings.
+</p><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="d0e5100"></a>4.4.1.1.&nbsp;General</h4></div></div><div></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+Enable
+</p><p>
+Lets you enable or disable the Code Inspector as a whole.
+</p></li></ul></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="d0e5109"></a>4.4.1.2.&nbsp;Tips</h4></div></div><div></div></div><p>
+Lets you selectively choose what actions should be performed during inspection. Moving the
+mouse pointer onto a checkbox displays a minimalistic tooltip after a short delay.
+</p><div class="itemizedlist"><ul type="disc"><li><p>
+Tip 1 - Don't substitute another type for <tt class="classname">Object</tt> in the equals declaration
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 35.
+</p></li><li><p>
+Tip 2 - Object the general contract when overriding <tt class="literal">equals</tt>
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 25.
+</p></li><li><p>
+Tip 3 - Always override <tt class="literal">hashCode</tt> when you override <tt class="literal">equals</tt>
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 36.
+</p></li><li><p>
+Tip 4 - Always override <tt class="literal">equals</tt> when you override <tt class="literal">hashCode</tt>
+</p></li><li><p>
+Tip 5 - Always override <tt class="literal">toString</tt>
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 42.
+</p></li><li><p>
+Tip 6 - Use interfaces only to define types
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 89.
+</p></li><li><p>
+Tip 7 - Replace structures with classes
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 97.
+</p></li><li><p>
+Tip 8 - Return zero-length arrays, not <tt class="literal">nulls</tt>
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 134.
+</p></li><li><p>
+Tip 9 - Adhere to generally accepted naming conventions
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 165.
+</p></li><li><p>
+Tip 10 - Refer to objects by their interfaces
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 156.
+</p></li><li><p>
+Tip 11 - Never declare that a method "throws Exception"
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 181.
+</p></li><li><p>
+Tip 12 - Never declare that a method "throws Throwable"
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 181.
+</p></li><li><p>
+Tip 13 - Don't ignore exceptions
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 187.
+</p></li><li><p>
+Tip 14 - Never invoke <tt class="literal">wait</tt> outside a loop
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 201.
+</p></li><li><p>
+Tip 15 - Avoid thread groups
+</p><p>
+For a detailed discussion see <span class="emphasis"><em>Effective Java</em></span> [<a href="bi01.html#bloch01">Bloch01</a>], pp. 211.
+</p></li><li><p>
+Tip 16 - Document collection types
+</p><p>
+As long as there are no strong-typed collections (a.k.a. Java Generics support) available,
+it is best to document the object type of the items hold by a collection.
+</p><div class="example"><a name="inspector-tip16"></a><p class="title"><b>Example&nbsp;4.154.&nbsp;Collection comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private static final List _favorableTypes = new ArrayList(20); // List of &lt;String&gt;
+</pre></td></tr></table></div><p></p></li><li><p>
+Tip 17 - Adhere to naming convention for collection types
+</p><p>
+If you use comments to document the object type of collection items, you should conform to
+a generally accepted naming convention.
+</p></li><li><p>
+Tip 18 - Avoid empty <tt class="literal">finally</tt> blocks
+</p><p>
+Empty <tt class="literal">finally</tt> blocks are of no use and may indicate programmer errors.
+</p><div class="example"><a name="inspector-tip18"></a><p class="title"><b>Example&nbsp;4.155.&nbsp;Empty <tt class="literal">finally</tt> block</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+Writer writer = null;
+
+try
+{
+    writer = new BufferedWriter(new FileWriter(file));
+    write.write(data);
+}
+catch (IOException ex)
+{
+    System.err.println("file could not be written -- " + file);
+}
+finally
+{
+}
+</pre></td></tr></table></div><p>
+The programmer certainly wanted to close the <tt class="classname">Writer</tt> in the
+<tt class="literal">finally</tt> block to ensure that allocated system resources will be freed.
+</p></li><li><p>
+Tip 19 - Avoid variable shadowing
+</p><p>
+Variable shadowing should be avoided on general principle, as it tends to be confusing.
+</p><p>
+For more information about shadowing, see the
+Java Developer Connection (JDC) Tech Tips, October 10, 2000
+(<a href="http://developer.java.sun.com/developer/TechTips/2000/tt1010.html#tip2" target="_top">
+http://developer.java.sun.com/developer/TechTips/2000/tt1010.html#tip2</a>, subscription needed) or
+section 6.3.2, "Obscured Declarations," section 7.5.2,
+"Type-Import-on-Demand Declaration," section 8.4.6, "Inheritance, Overriding, and Hiding,"
+section 8.4.8.5, "Example: Invocation of Hidden Class Methods," and section 14.4.3,
+"Shadowing of Names by Local variables" in "The Java Language Specification Second
+Edition" by Gosling, Joy, Steele, and Bracha
+(<a href="http://java.sun.com/docs/books/jls/" target="_top">http://java.sun.com/docs/books/jls/)</a>.
+</p></li><li><p>
+Tip 20 - Add <span class="emphasis"><em>NOI18N</em></span> comment for String literals
+</p><p>
+Enabling this tip will cause warnings for all String literals without associated
+<tt class="literal">/* NOI18N */</tt> comment.
+</p><p>
+Internationalizing Java applications is often done with nifty tools that use marker
+comments to indicate that a given String literal should not be considered for localization.
+Most tools (at least the ones I know of) use trailing single-line comments which may not
+be very robust for processing with a formatting tool such as Jalopy. In contrast the author
+uses a multi-line comment of the form <tt class="literal">/* NOI18N */</tt> that gets directly
+placed after a String literal and will therefore always stuck with it.
+</p><div class="example"><a name="inspector-tip20"></a><p class="title"><b>Example&nbsp;4.156.&nbsp;$NON-NLS-1$ comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+FileDialog dialog = new FileDialog(this,
+    ResourceBundle.getBundle(BUNDLE_NAME)
+    .getString("BTN_SAVE_AS", FileDialog.SAVE); //$NON-NLS-1$
+</pre></td></tr></table></div><p>
+This trailing comment could be easily moved away from its String literal during formatting
+which would result in an unwanted notice on successive internationalization runs.
+</p><div class="example"><a name="inspector-tip20a"></a><p class="title"><b>Example&nbsp;4.157.&nbsp;$NON-NLS-1$ comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+FileDialog dialog =
+    new FileDialog(this,
+                   ResourceBundle.getBundle(BUNDLE_NAME).
+                                  getString("BTN_SAVE_AS",
+                   FileDialog.SAVE); //$NON-NLS-1$
+</pre></td></tr></table></div><p></p><div class="example"><a name="inspector-tip20b"></a><p class="title"><b>Example&nbsp;4.158.&nbsp;NOI18N comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+FileDialog dialog =
+    new FileDialog(this,
+                   ResourceBundle.getBundle(BUNDLE_NAME).
+                                  getString("BTN_SAVE_AS" /* NOI18N */),
+                   FileDialog.SAVE);
+</pre></td></tr></table></div><p></p></li></ul></div></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="misc.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="settings.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="inspector-naming.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4.3.13.&nbsp;Misc&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;4.4.2.&nbsp;Naming</td></tr></table></div></td></tr></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2004, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

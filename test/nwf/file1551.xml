@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc [
+<!ELEMENT doc (#PCDATA)>
+<!ATTLIST doc a CDATA #IMPLIED>
+<!ENTITY e '"'>
+]>
+<doc a="&e;></doc>

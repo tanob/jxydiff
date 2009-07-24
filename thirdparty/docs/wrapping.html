@@ -1,0 +1,586 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>4.3.4.&nbsp;Wrapping</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><link rel="home" href="manual.html" title="Jalopy User Manual"><link rel="up" href="printer.html" title="4.3.&nbsp;Printer"><link rel="previous" href="indentation.html" title="4.3.3.&nbsp;Indentation"><link rel="next" href="separation.html" title="4.3.5.&nbsp;Blank Lines"><link rel="preface" href="dedication.html" title="Dedication"><link rel="preface" href="acknowledge.html" title="Acknowledgements"><link rel="preface" href="introduction.html" title="Introduction"><link rel="part" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="chapter" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="chapter" href="build.html" title="Chapter&nbsp;2.&nbsp;Building"><link rel="chapter" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="chapter" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="part" href="part-plugins.html" title="Part&nbsp;II.&nbsp;Plug-ins"><link rel="chapter" href="plugin-ant.html" title="Chapter&nbsp;5.&nbsp;Ant Plug-in task"><link rel="chapter" href="plugin-console.html" title="Chapter&nbsp;6.&nbsp;Console Application"><link rel="chapter" href="plugin-eclipse.html" title="Chapter&nbsp;7.&nbsp;Eclipse Plug-in"><link rel="chapter" href="plugin-jbuilder.html" title="Chapter&nbsp;8.&nbsp;JBuilder OpenTool"><link rel="chapter" href="plugin-jdev.html" title="Chapter&nbsp;9.&nbsp;JDeveloper Extension"><link rel="chapter" href="plugin-jedit.html" title="Chapter&nbsp;10.&nbsp;jEdit Plug-in"><link rel="chapter" href="plugin-netbeans.html" title="Chapter&nbsp;11.&nbsp;NetBeans/Sun ONE Studio module"><link rel="appendix" href="dependencies.html" title="Appendix&nbsp;A.&nbsp;Library Dependencies"><link rel="appendix" href="license-bsd.html" title="Appendix&nbsp;B.&nbsp;The Jalopy BSD License"><link rel="appendix" href="license-antlr.html" title="Appendix&nbsp;C.&nbsp;ANTLR SOFTWARE RIGHTS"><link rel="appendix" href="license-apache.html" title="Appendix&nbsp;D.&nbsp;The Apache Software License, Version 1.1"><link rel="appendix" href="license-gnu.html" title="Appendix&nbsp;E.&nbsp;GNU GENERAL PUBLIC LICENSE Version 2, June 1991"><link rel="appendix" href="license-gnu-doc.html" title="Appendix&nbsp;F.&nbsp;GNU Free Documentation License Version 1.1, March 2000"><link rel="appendix" href="license-common-public.html" title="Appendix&nbsp;G.&nbsp;Common Public License Version 1.0"><link rel="appendix" href="license-sun-public.html" title="Appendix&nbsp;H.&nbsp;SUN PUBLIC LICENSE Version 1.0"><link rel="index" href="ix01.html" title="Index"><link rel="subsection" href="wrapping.html#wrap-general" title="4.3.4.1.&nbsp;General"><link rel="subsection" href="wrapping.html#wrap-always" title="4.3.4.2.&nbsp;Always"><link rel="subsection" href="wrapping.html#wrap-misc" title="4.3.4.3.&nbsp;Misc">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="left"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                    <a href="./history.html" class="navlink2">History</a> |
+                    <a href="./manual.html" class="navlink2">Manual</a> |
+                    <a href="./faq.html" class="navlink2">FAQ</a> |
+                    <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+                    This page generated: <strong>June 8 2004</strong></td></tr></tbody></table><table border="0" width="100%" cellspacing="0" cellpadding="5"><tr><td><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.3.4.&nbsp;Wrapping</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="indentation.html">Prev</a>&nbsp;</td><th width="60%" align="center">4.3.&nbsp;Printer</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="separation.html">Next</a></td></tr></table><hr></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="wrapping"></a>4.3.4.&nbsp;Wrapping</h3></div></div><div></div></div><a class="indexterm" name="d0e2657"></a><a class="indexterm" name="d0e2660"></a><p>
+Controls when and how lines gets wrapped.
+</p><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="wrap-general"></a>4.3.4.1.&nbsp;General</h4></div></div><div></div></div><p>
+Lets you control the general line wrapping options.
+</p><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="wrap-general-general"></a>4.3.4.1.1.&nbsp;General</h5></div></div><div></div></div><p>
+Lets you control the general line wrapping options.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="wrap-use"></a>
+Wrap lines
+</p><p>
+Enables or disables the automatic line wrapping.
+</p></li><li><p><a name="wrap-sizes-line"></a>
+Line length
+</p><p>
+Lets you specify the maximum line length. Jalopy tries (more or less) to limit
+each line within the given length.
+</p><a class="indexterm" name="d0e2686"></a><a class="indexterm" name="d0e2691"></a></li><li><p><a name="wrap-sizes-deep"></a>
+Deep indent
+</p><a class="indexterm" name="d0e2697"></a><a class="indexterm" name="d0e2702"></a><p>
+Specifies the length after which a gap will be identified as "deep indented".
+Jalopy tries to avoid these kind of gaps and will force a line break or apply
+another indentation scheme, if this size is exceeded.
+</p><div class="example"><a name="ex-wrap-sizes-deep"></a><p class="title"><b>Example&nbsp;4.65.&nbsp;Deep indent size (60) not exceeded</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+                                                            |                  |
+    protected static synchronized File getANewDestinationFile(File dest,       |
+                                                            | String packageName,
+                                                            | String filename) |
+|----------------- the gap ---------------------------|throws IOException      |
+    {                                                       |                  |
+    }                                                       |                  |
+                                                            |                  |
+                                                            60                 79
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-sizes-deep-exceed"></a><p class="title"><b>Example&nbsp;4.66.&nbsp;Deep indent size (50) exeeded</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+                                                  |                            |
+    protected static synchronized File getANewDestinationFile(File dest,       |
+                                                  |           String packageName,
+                                                  |           String filename) |
+|----------------- the gap ---------------------------|throws IOException      |
+    {                                             |                            |
+    }                                             |                            |
+                                                  |                            |
+                                                  50                           79
+</pre></td></tr></table></div></li></ul></div></div><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="wrap-policy"></a>4.3.4.1.2.&nbsp;Policy</h5></div></div><div></div></div><a class="indexterm" name="d0e2721"></a><a class="indexterm" name="d0e2726"></a><p>
+Lets you fine-control the wrapping behaviour.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="wrap-left-parenthesis"></a>
+Wrap after left parenthesis
+</p><p>
+Lets you control the wrapping behaviour for statement and expression lists.
+</p><p>
+If left disabled, the first line break will be preferably inserted
+behind the first parameter or expression and only occurs after the left
+parenthesis if the maximum line length would be exceeded.</p><div class="example"><a name="ex-wrap-left-parenthesis-disabled"></a><p class="title"><b>Example&nbsp;4.67.&nbsp;Wrap after left parenthesis (disabled)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+                                                                               |
+appServerReferencesVector.add<span class="bold"><b>(</b></span>new AppServerReference<span class="bold"><b>(</b></span>
+        "RemoteApplicationManager",                                            |
+        poa.create_reference_with_id<span class="bold"><b>(</b></span>         |
+            "RemoteApplicationManager".getBytes(),                             |
+            RemoteApplicationManagerHelper.id())));                            |
+                                                                               |
+</pre></td></tr></table></div><p>
+Otherwise the line break will always occur behind the left parenthesis.
+</p><div class="example"><a name="ex-wrap-left-parenthesis-enabled"></a><p class="title"><b>Example&nbsp;4.68.&nbsp;Wrap after left parenthesis (enabled)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+appServerReferencesVector.add<span class="bold"><b>(</b></span>
+    new AppServerReference<span class="bold"><b>(</b></span>
+        "RemoteApplicationManager",
+        poa.create_reference_with_id<span class="bold"><b>(</b></span>
+            "RemoteApplicationManager".getBytes(),
+            RemoteApplicationManagerHelper.id())));
+</pre></td></tr></table></div><p>
+This switch affects the output style of method/constructor declarations and
+calls, creator statements and <tt class="literal">if-else</tt>, <tt class="literal">for</tt>,
+<tt class="literal">while</tt> and <tt class="literal">do-while</tt> blocks.
+</p><p>
+As per default, the wrapped lines will be indended using
+<a href="indentation.html#indentation-policy-standard">Standard indentation</a>, but you
+may want to apply another indentation scheme. See
+<a href="indentation.html#indentation-policy" title="4.3.3.1.1.&nbsp;Policy">Section&nbsp;4.3.3.1.1, &#8220;Policy&#8221;</a> for more information.
+</p><p></p></li><li><p><a name="wrap-right-parenthesis"></a>
+Wrap before right parenthesis
+</p><p>
+Forces a line break before the right parenthesis of parameter or expression lists.
+The parenthesis will be intended according to the current indentation level.
+Only takes action if at least one parameter/expression was indeed wrapped.
+</p><p>
+This switch affects the output style of method/constructor declarations and
+calls, creator statements and <tt class="literal">if-else</tt>, <tt class="literal">for</tt>,
+<tt class="literal">while</tt> and <tt class="literal">do-while</tt> blocks.
+</p><div class="example"><a name="ex-wrap-right-parenthesis"></a><p class="title"><b>Example&nbsp;4.69.&nbsp;Right parenthesis (disabled)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public void severalParameters(String one,
+                              int two,
+                              String three,
+                              StringObject four,
+                              AnotherObject five<span class="bold"><b>)</b></span> {
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-right-parenthesis-enabled"></a><p class="title"><b>Example&nbsp;4.70.&nbsp;Right parenthesis (enabled)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public void severalParameters(String one,
+                              int two,
+                              String three,
+                              StringObject four,
+                              AnotherObject five
+<span class="bold"><b>)</b></span> {
+}
+</pre></td></tr></table></div><p>
+Both switches combined, looks like the following example:
+</p><div class="example"><a name="ex-wrap-left-right-parenthesis"></a><p class="title"><b>Example&nbsp;4.71.&nbsp;Left and right parenthesis</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+appServerReferencesVector.add<span class="bold"><b>(</b></span>
+    new AppServerReference<span class="bold"><b>(</b></span>
+        "RemoteApplicationManager",
+        poa.create_reference_with_id<span class="bold"><b>(</b></span>
+            "RemoteApplicationManager".getBytes(),
+            RemoteApplicationManagerHelper.id()
+        <span class="bold"><b>)</b></span>
+    <span class="bold"><b>)</b></span>
+<span class="bold"><b>)</b></span>;
+</pre></td></tr></table></div><p>
+For blocks the output may go like this:
+</p><div class="example"><a name="ex-wrap-left-right-parenthesis-wrapped-continue"></a><p class="title"><b>Example&nbsp;4.72.&nbsp;Left and right parenthesis (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if <span class="bold"><b>(</b></span>
+    "pick".equals(m.getName()) &amp;&amp; m.isStatic() &amp;&amp; m.isPublic()
+<span class="bold"><b>)</b></span> {
+    pickFound = true;
+}
+else if <span class="bold"><b>(</b></span>
+    "pick".equals(m.getName()) &amp;&amp; m.isStatic() &amp;&amp; m.isPublic()
+<span class="bold"><b>)</b></span> {
+    pickFound = true;
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-grouping-paren"></a>
+Wrap grouping parentheses
+</p><p>
+Lets you control the wrapping behaviour for grouping parentheses. If enabled,
+linebreaks are inserted after left and before right parentheses of grouped
+expressions to let the expression(s) stand out.
+</p><div class="example"><a name="ex-wrap-grouping-no"></a><p class="title"><b>Example&nbsp;4.73.&nbsp;Grouping parentheses (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if (
+    !<span class="bold"><b>(</b></span>(bankverbindung instanceof ObjectValue)
+    || (bankverbindung instanceof PrimitiveValue<span class="bold"><b>)</b></span>)
+) {
+    throw new RuntimeException();
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-grouping"></a><p class="title"><b>Example&nbsp;4.74.&nbsp;Wrapped grouping parentheses (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if (
+    !<span class="bold"><b>(</b></span>
+        (bankverbindung instanceof ObjectValue)
+        || (bankverbindung instanceof TkPrimitiveValue)
+    <span class="bold"><b>)</b></span>
+) {
+    throw new RuntimeException();
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-after-assignment"></a>
+Wrap after assignments
+</p><p>
+Lets you control the way wrapping takes action for assignments. If left disabled,
+line wrapping preferably occurs as part of the expression printing. Otherwise
+wrapping will be performed right after the assignment.
+</p><div class="example"><a name="ex-wrap-assignment-no"></a><p class="title"><b>Example&nbsp;4.75.&nbsp;Don't wrap after assignment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+this.interessentenNr = new InteressentenNr(
+        Fachschluesselerzeugung.createService()
+        .getNeuerFachschluessel(
+            FachschluesselerzeugungService.FACHSCHLUESSEL_KZ_INTERESSENT
+        )
+    );
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-assignment"></a><p class="title"><b>Example&nbsp;4.76.&nbsp;Wrap after assignment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+this.interessentenNr =
+    new InteressentenNr(
+        Fachschluesselerzeugung.createService()
+        .getNeuerFachschluessel(
+            FachschluesselerzeugungService.FACHSCHLUESSEL_KZ_INTERESSENT
+        )
+    );
+</pre></td></tr></table></div><p></p></li></ul></div><p>
+Line wrapping will often occur with statements that consist of several (possibly long)
+expressions. Here you specify whether line wrapping should occur
+before or after the expression operator.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="wrap-before"></a>
+Wrap before operators
+</p><a class="indexterm" name="d0e2926"></a><p>
+If enabled, lines will be wrapped before the operator. The operator will be
+printed with the continuation line.
+</p><div class="example"><a name="ex-wrap-before"></a><p class="title"><b>Example&nbsp;4.77.&nbsp;Wrap before operators</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if ((condition1 &amp;&amp; condition2)
+    || (condition3 &amp;&amp; condition4)
+    || !(condition5 &amp;&amp; condition6))
+{
+    doSomethingAboutIt();
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-after"></a>
+Wrap after operators
+</p><a class="indexterm" name="d0e2942"></a><p>
+If enabled, lines will be wrapped after the operator.
+</p><div class="example"><a name="ex-wrap-after"></a><p class="title"><b>Example&nbsp;4.78.&nbsp;Wrap after operators</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if ((condition1 &amp;&amp; condition2) ||
+    (condition3 &amp;&amp; condition4) ||
+    !(condition5 &amp;&amp; condition6))
+{
+    doSomethingAboutIt();
+}
+</pre></td></tr></table></div><p>
+If you happen to use Sun Brace styling, you might want to enable
+<a href="indentation.html#indentation-misc-continuation-if">continuation indentation</a>
+to let the statement body stand out.
+</p><p></p></li></ul></div></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="wrap-always"></a>4.3.4.2.&nbsp;Always</h4></div></div><div></div></div><p>
+Lets you choose the statements/expressions that are to be wrapped always.
+</p><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="wrap-always-pane"></a>4.3.4.2.1.&nbsp;Wrap always</h5></div></div><div></div></div><p>
+For certain cases, the need may arise to force line wrapping to achieve a
+consistent, uniform look. If you enable any of the following switches, line wrapping
+will occur for the specified cases no matter whether you have enabled general
+line wrapping or not.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="wrap-before-extends"></a>
+Before extends keyword
+</p><p>
+Forces a line break before the extends keyword of a class/interface declaration.
+</p><div class="example"><a name="ex-wrap-before-extends"></a><p class="title"><b>Example&nbsp;4.79.&nbsp;Class/Interface extends keyword</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface Channel extends Puttable, Takable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-before-extends-wrapped"></a><p class="title"><b>Example&nbsp;4.80.&nbsp;Class/Interface extends keyword (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface Channel
+    extends Puttable, Takable
+{
+    ...
+}
+</pre></td></tr></table></div><p>
+You can control the space printed before the keyword with the
+<a href="indentation.html#indentation-sizes-extends">Extends Indent</a> setting.
+If you leave the switch disabled, the clause will be printed with
+<a href="indentation.html#indentation-sizes-general">standard indentation</a>.
+</p></li><li><p>
+After extends types
+</p><p>
+Forces a line wrap after each type name of the extended classes.
+</p><div class="example"><a name="ex-wrap-after-extends"></a><p class="title"><b>Example&nbsp;4.81.&nbsp;Class/Interface extends types</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface Channel extends Puttable, Takable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-after-extends-wrapped"></a><p class="title"><b>Example&nbsp;4.82.&nbsp;Class/Interface extends types (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface Channel extends Puttable,
+                                 Takable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-before-implements"></a>
+Before implements keyword
+</p><p>
+Forces a line break before the implements keyword of a class declaration.
+</p><div class="example"><a name="ex-wrap-before-implements"></a><p class="title"><b>Example&nbsp;4.83.&nbsp;implements keyword</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class SynchronizedBoolean implements Comparable, Cloneable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-before-implements-wrapped"></a><p class="title"><b>Example&nbsp;4.84.&nbsp;implements keyword (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class SynchronizedBoolean
+    implements Comparable, Cloneable
+{
+    ...
+}
+</pre></td></tr></table></div><p>
+You can control the space printed before the keyword with the
+<a href="indentation.html#indentation-sizes-implements">Implements Indent</a> setting.
+If you leave the switch disabled, the clause will be printed with
+<a href="indentation.html#indentation-sizes-general">standard indentation</a>.
+</p></li><li><p><a name="wrap-after-implements"></a>
+After implements types
+</p><p>
+Forces a line wrap after each type name of the implemented classes.
+</p><div class="example"><a name="ex-wrap-implements-types"></a><p class="title"><b>Example&nbsp;4.85.&nbsp;Class implements types</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class SynchronizedBoolean implements Comparable, Cloneable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-implements-types-wrapped"></a><p class="title"><b>Example&nbsp;4.86.&nbsp;Class implements types (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class SynchronizedBoolean implements Comparable,
+                                            Cloneable
+{
+    ...
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-before-throws"></a>
+Before throws keyword
+</p><p>
+Forces a line break before the throws keyword of a method/constructor declaration.
+</p><div class="example"><a name="ex-wrap-before-throws"></a><p class="title"><b>Example&nbsp;4.87.&nbsp;throws keyword</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName,
+                                String filename) throws IOException
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-before-throws-wrapped"></a><p class="title"><b>Example&nbsp;4.88.&nbsp;throws keyword (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName,
+                                String filename)
+                         throws IOException
+{
+    ...
+}
+</pre></td></tr></table></div><p>
+You can control the space printed before the keyword with the
+<a href="indentation.html#indentation-sizes-throws">Throws Indent</a> setting. If you
+leave the switch disabled, Jalopy tries to align the throws clause with the
+method/constructor parameters as with the above example. If no alignment is
+possible, the clause will be printed with
+<a href="indentation.html#indentation-sizes-general">standard indentation</a>.
+</p></li><li><p><a name="wrap-after-throws"></a>
+After throws types
+</p><p>
+Forces a line wrap after each type name of the throws clause of a method/constructor declaration.
+</p><div class="example"><a name="ex-wrap-after-throws-types"></a><p class="title"><b>Example&nbsp;4.89.&nbsp;throws types</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName,
+                                String filename)
+                         throws IOException, FooException
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-after-throws-types-wrapped"></a><p class="title"><b>Example&nbsp;4.90.&nbsp;throws types (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName,
+                                String filename)
+                         throws IOException,
+                                FooException
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-after-throws-types-wrapped-standard"></a><p class="title"><b>Example&nbsp;4.91.&nbsp;throws types (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private static final File getDestinationFile(File dest, String packageName,
+                                             String filename)
+    throws IOException,
+          FooException
+{
+    ...
+}
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-method-params"></a>
+Method Def parameters
+</p><a class="indexterm" name="d0e3103"></a><a class="indexterm" name="d0e3106"></a><p>
+Forces a line wrap after each parameter of a method or constructor declaration.
+</p><div class="example"><a name="ex-wrap-method-params"></a><p class="title"><b>Example&nbsp;4.92.&nbsp;Method declaration parameters</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public static File create(File file, File directory, int backupLevel)
+                   throws IOException
+{
+    ...
+}
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-method-params-wrapped"></a><p class="title"><b>Example&nbsp;4.93.&nbsp;Method declaration parameters (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public static File create(File file,
+                          File directory,
+                          int backupLevel)
+                   throws IOException
+{
+    ...
+}
+</pre></td></tr></table></div></li><li><p><a name="wrap-call-chained"></a>
+Method Call chains
+</p><p>
+Forces a line wrap after each chained method call.
+</p><div class="example"><a name="ex-wrap-call-chained"></a><p class="title"><b>Example&nbsp;4.94.&nbsp;Chained Method Call</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+message.format(ERROR_SOURCE_ADDRESS).param (m_session.getAimName()).send();
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-call-chained-wrapped"></a><p class="title"><b>Example&nbsp;4.95.&nbsp;Chained Method Call (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+message.format(ERROR_SOURCE_ADDRESS)
+       .param (m_session.getAimName())
+       .send();
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-method-call-params"></a>
+Method Call parameters
+</p><p>
+Forces a line wrap after each parameter of a method call.
+</p><div class="example"><a name="ex-wrap-method-call"></a><p class="title"><b>Example&nbsp;4.96.&nbsp;Method call</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+doSomething();
+_userDatabase.addUser("Name", encryptPassword("password", _secretKey),
+                      "123 fake address");
+doSomethingElse();
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-method-call-wrapped"></a><p class="title"><b>Example&nbsp;4.97.&nbsp;Method call (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+doSomething();
+_userDatabase.addUser("Name",
+                      encryptPassword("password",
+                                      _secretKey),
+                      "123 fake address");
+doSomethingElse();
+</pre></td></tr></table></div><p></p></li><li><p>
+Method Call parameters if nested
+</p><p>
+Forces a line wrap after each parameter of a method call if at least one
+parameter is a method call itself. This option can prove especially useful if
+one prefers to nest method calls as parameters rather than adding local
+variables just to hold those parameters.
+</p><div class="example"><a name="ex-wrap-method-call-nested-wrapped"></a><p class="title"><b>Example&nbsp;4.98.&nbsp;Method call if nested (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+doSomething();
+_userDatabase.addUser("Name",
+                      encryptPassword("password", _secretKey),
+                      "123 fake address");
+doSomethingElse();
+</pre></td></tr></table></div><p></p></li><li><p>
+Ternary expression question mark (<tt class="literal">?</tt>)
+</p><p>
+Forces a line wrap after the first operand.
+</p><div class="example"><a name="ex-wrap-ternary-expr"></a><p class="title"><b>Example&nbsp;4.99.&nbsp;Ternary expression question mark (deep indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String comma = spaceAfterComma
+               ? COMMA_SPACE : COMMA;
+</pre></td></tr></table></div><p>
+Indentation for consecutive lines depends on the used <a href="indentation.html#indentation-policy" title="4.3.3.1.1.&nbsp;Policy">indenatation policy</a>.
+You may further want to use <a href="indentation.html#indentation-misc-ternary-if-else">continuation indentation</a>.
+</p></li><li><p><a name="wrap-ternary-colon"></a>
+Ternary expression colon (<tt class="literal">:</tt>)
+</p><p>
+Forces a line wrap after the second operand.
+</p><div class="example"><a name="ex-wrap-ternary-values"></a><p class="title"><b>Example&nbsp;4.100.&nbsp;Ternary expression colon</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String comma = spaceAfterComma ? COMMA_SPACE
+                               : COMMA;
+</pre></td></tr></table></div><p>
+If both switches are disabled, ternary expressions are printed in one line (if everything fits in one line, that is).
+</p><div class="example"><a name="ex-wrap-ternary"></a><p class="title"><b>Example&nbsp;4.101.&nbsp;Ternary expressions</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String comma = spaceAfterComma ? COMMA_SPACE : COMMA;
+</pre></td></tr></table></div><p>
+If both switches are enabled, you can force a style like the following:
+</p><div class="example"><a name="ex-wrap-ternary-continued"></a><p class="title"><b>Example&nbsp;4.102.&nbsp;Ternary expressions (continued)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String comma = spaceAfterComma
+    ? COMMA_SPACE
+    : COMMA;
+</pre></td></tr></table></div><p></p></li><li><p><a name="wrap-always-label"></a>
+Labels
+</p><a class="indexterm" name="d0e3222"></a><a class="indexterm" name="d0e3225"></a><p>
+Forces a line wrap after labels.
+</p><div class="example"><a name="ex-wrap-always-label"></a><p class="title"><b>Example&nbsp;4.103.&nbsp;Label</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+// advance to the first CLASS_DEF or INTERFACE_DEF
+LOOP:   for (AST child = tree.getFirstChild();
+             child != null;
+             child = child.getNextSibling())
+        {
+            switch (child.getType())
+            {
+                case JavaTokenTypes.CLASS_DEF :
+                case JavaTokenTypes.INTERFACE_DEF :
+                    next = child;
+                    break LOOP;
+
+                default :
+                    break;
+            }
+        }
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wraping-always-label-wrapped"></a><p class="title"><b>Example&nbsp;4.104.&nbsp;Label (wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+// advance to the first CLASS_DEF or INTERFACE_DEF
+LOOP:
+        for (AST child = tree.getFirstChild();
+             child != null;
+             child = child.getNextSibling())
+        {
+            switch (child.getType())
+            {
+                case JavaTokenTypes.CLASS_DEF :
+                case JavaTokenTypes.INTERFACE_DEF :
+                    next = child;
+                    break LOOP;
+
+                default :
+                    break;
+            }
+        }
+</pre></td></tr></table></div><p></p></li></ul></div></div><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="wrap-always-exceed"></a>4.3.4.2.2.&nbsp;Wrap always when exceed</h5></div></div><div></div></div><p>
+Lets you force wrapping for <span class="emphasis"><em>all</em></span> parameter or expressions if
+the parameter or expression list would otherwise exceed the maximal line length.
+If you enable any of the following switches, line wrapping
+may occur for the specified cases no matter whether you have enabled general
+line wrapping or not.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="wrap-always-extends"></a>
+After extends types
+</p><p>
+Forces a line wrap after each type name of the <tt class="literal">extends</tt> clause of a
+class/interface declaration if the whole clause does not fit in one line.
+</p><div class="example"><a name="ex-wrap-always-extends"></a><p class="title"><b>Example&nbsp;4.105.&nbsp;Extends types wrapped as needed (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface VeryImportantInterface                        |
+    extends LeastImportantInterface, LessImportantInterface,   |
+        ImportantInterface                                     |
+}                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div><p></p><div class="example"><a name="wrap-always-extends-enabled"></a><p class="title"><b>Example&nbsp;4.106.&nbsp;Extends types wrapping forced (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public interface VeryImportantInterface                        |
+    extends LeastImportantInterface,                           |
+        LessImportantInterface,                                |
+        ImportantInterface                                     |
+}                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div></li><li><p><a name="wrap-always-implements"></a>
+After implements types
+</p><p>
+Forces a line wrap after each type name of the <tt class="literal">implements</tt> clause of a
+class/interface declaration if the whole clause does not fit in one line.
+</p><div class="example"><a name="ex-wrap-always-implements"></a><p class="title"><b>Example&nbsp;4.107.&nbsp;Implements types wrapped as needed (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class ImportantClass                                    |
+    implements ImportantInterface, Serializable, Comparable,   |
+        Cloneable                                              |
+}                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div><p></p><div class="example"><a name="wrap-always-implements-enabled"></a><p class="title"><b>Example&nbsp;4.108.&nbsp;Implements types wrapping forced (standard indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+public class ImportantClass                                    |
+    implements ImportantInterface,                             |
+        Serializable,                                          |
+        Comparable,                                            |
+        Cloneable                                              |
+}                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div></li><li><p><a name="wrap-always-throws"></a>
+After throws types
+</p><p>
+Forces a line wrap after each type name of the <tt class="literal">throws</tt> clause of a
+method/constructor declaration if the whole clause does not fit in one line.
+</p><div class="example"><a name="ex-wrap-always-throws"></a><p class="title"><b>Example&nbsp;4.109.&nbsp;Throws types wrapped as needed (deep indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName, |
+                                String filename)               |
+                         throws IOException, FooException,     |
+                                FooBarException                |
+{                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div><p></p><div class="example"><a name="wrap-always-throws-enabled"></a><p class="title"><b>Example&nbsp;4.110.&nbsp;Throws types wrapping forced (deep indented)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+private File getDestinationFile(File dest, String packageName, |
+                                String filename)               |
+                         throws IOException,                   |
+                                FooException,                  |
+                                FooBarException                |
+{                                                              |
+    ...                                                        |
+}                                                              |
+</pre></td></tr></table></div></li><li><p><a name="wrap-always-param"></a>
+After parameters/expressions
+</p><p>
+If enabled, this switch will cause all parameters/expressions to be
+wrapped, if and only if the first parameter/expression of the list has been
+wrapped.
+</p><div class="example"><a name="ex-wrap-all"></a><p class="title"><b>Example&nbsp;4.111.&nbsp;Expression list (all wrapped)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+if (
+    "pick".equals(m.getName()) &amp;&amp;
+    m.isStatic() &amp;&amp;
+    m.isPublic()
+) {
+    pickFound = true;
+}
+else if (
+    "pick".equals(m.getName()) &amp;&amp;
+    m.isStatic() &amp;&amp;
+    m.isPublic()
+) {
+    pickFound = true;
+}
+</pre></td></tr></table></div><p></p></li></ul></div></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="wrap-misc"></a>4.3.4.3.&nbsp;Misc</h4></div></div><div></div></div><p>Lets you control miscellaneous wrapping settings.</p><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="wrap-misc-arrays"></a>4.3.4.3.1.&nbsp;Arrays</h5></div></div><div></div></div><p>Contains options to control the wrapping for arrays.</p><div class="itemizedlist"><ul type="disc"><li><p>Wrap as needed</p><p>Enabling this options means array elements will be wrapped so that they
+will be limited within the current <a href="wrapping.html#wrap-sizes-line">line length</a> setting.</p><div class="example"><a name="ex-wrap-arrays-as-needed"></a><p class="title"><b>Example&nbsp;4.112.&nbsp;Wrap as needed</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String[] constraints = {                                               |
+    "patternPanel.top=form.top", "patternPanel.hcenter=form.hcenter",  |
+    "okButton.top=patternPanel.bottom+20",                             |
+    "okButton.right=form.hcenter-10", "cancelButton.vcenter=10",       |
+    "cancelButton.left=10"                                             |
+};                                                                     |
+</pre></td></tr></table></div><p></p></li><li><p>Wrap after element</p><p>Forces a newline after every  n-th element.</p><div class="example"><a name="ex-wrap-arrays-after-one"></a><p class="title"><b>Example&nbsp;4.113.&nbsp;Wrap after element 1</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String[] constraints = {                                               |
+    "patternPanel.top=form.top",                                       |
+    "patternPanel.hcenter=form.hcenter",                               |
+    "okButton.top=patternPanel.bottom+20",                             |
+    "okButton.right=form.hcenter-10",                                  |
+    "cancelButton.vcenter=10",                                         |
+    "cancelButton.left=10"                                             |
+};                                                                     |
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-wrap-arrays-after-two"></a><p class="title"><b>Example&nbsp;4.114.&nbsp;Wrap after element 2</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+String[] constraints = {                                               |
+    "patternPanel.top=form.top", "patternPanel.hcenter=form.hcenter",
+    "okButton.top=patternPanel.bottom+20", "okButton.right=form.hcenter-10",
+    "cancelButton.vcenter=10", "cancelButton.left=10"                  |
+};                                                                     |
+</pre></td></tr></table></div><p>
+If both options are left disabled, the array elements will be printed in one
+line, right after the left curly brace.
+</p></li></ul></div></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="indentation.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="printer.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="separation.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4.3.3.&nbsp;Indentation&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;4.3.5.&nbsp;Blank Lines</td></tr></table></div></td></tr></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2004, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

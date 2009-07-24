@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE root SYSTEM "../valid/dtdtest.dtd">
+<root>
+    <once-or-twice-b><e/><e/><e/></once-or-twice-b>
+</root>
+
+
+

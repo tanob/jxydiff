@@ -1,0 +1,153 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>4.3.9.&nbsp;Javadoc</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><link rel="home" href="manual.html" title="Jalopy User Manual"><link rel="up" href="printer.html" title="4.3.&nbsp;Printer"><link rel="previous" href="environment.html" title="4.3.8.&nbsp;Environment"><link rel="next" href="header.html" title="4.3.10.&nbsp;Header"><link rel="preface" href="dedication.html" title="Dedication"><link rel="preface" href="acknowledge.html" title="Acknowledgements"><link rel="preface" href="introduction.html" title="Introduction"><link rel="part" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="chapter" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="chapter" href="build.html" title="Chapter&nbsp;2.&nbsp;Building"><link rel="chapter" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="chapter" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="part" href="part-plugins.html" title="Part&nbsp;II.&nbsp;Plug-ins"><link rel="chapter" href="plugin-ant.html" title="Chapter&nbsp;5.&nbsp;Ant Plug-in task"><link rel="chapter" href="plugin-console.html" title="Chapter&nbsp;6.&nbsp;Console Application"><link rel="chapter" href="plugin-eclipse.html" title="Chapter&nbsp;7.&nbsp;Eclipse Plug-in"><link rel="chapter" href="plugin-jbuilder.html" title="Chapter&nbsp;8.&nbsp;JBuilder OpenTool"><link rel="chapter" href="plugin-jdev.html" title="Chapter&nbsp;9.&nbsp;JDeveloper Extension"><link rel="chapter" href="plugin-jedit.html" title="Chapter&nbsp;10.&nbsp;jEdit Plug-in"><link rel="chapter" href="plugin-netbeans.html" title="Chapter&nbsp;11.&nbsp;NetBeans/Sun ONE Studio module"><link rel="appendix" href="dependencies.html" title="Appendix&nbsp;A.&nbsp;Library Dependencies"><link rel="appendix" href="license-bsd.html" title="Appendix&nbsp;B.&nbsp;The Jalopy BSD License"><link rel="appendix" href="license-antlr.html" title="Appendix&nbsp;C.&nbsp;ANTLR SOFTWARE RIGHTS"><link rel="appendix" href="license-apache.html" title="Appendix&nbsp;D.&nbsp;The Apache Software License, Version 1.1"><link rel="appendix" href="license-gnu.html" title="Appendix&nbsp;E.&nbsp;GNU GENERAL PUBLIC LICENSE Version 2, June 1991"><link rel="appendix" href="license-gnu-doc.html" title="Appendix&nbsp;F.&nbsp;GNU Free Documentation License Version 1.1, March 2000"><link rel="appendix" href="license-common-public.html" title="Appendix&nbsp;G.&nbsp;Common Public License Version 1.0"><link rel="appendix" href="license-sun-public.html" title="Appendix&nbsp;H.&nbsp;SUN PUBLIC LICENSE Version 1.0"><link rel="index" href="ix01.html" title="Index"><link rel="subsection" href="javadoc.html#javadoc-general" title="4.3.9.1.&nbsp;General"><link rel="subsection" href="javadoc.html#javadoc-generation" title="4.3.9.2.&nbsp;Generation"><link rel="subsection" href="javadoc.html#javadoc-templates" title="4.3.9.3.&nbsp;Templates"><link rel="subsection" href="javadoc.html#javadoc-tags" title="4.3.9.4.&nbsp;Custom Tags">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="left"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                    <a href="./history.html" class="navlink2">History</a> |
+                    <a href="./manual.html" class="navlink2">Manual</a> |
+                    <a href="./faq.html" class="navlink2">FAQ</a> |
+                    <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+                    This page generated: <strong>June 8 2004</strong></td></tr></tbody></table><table border="0" width="100%" cellspacing="0" cellpadding="5"><tr><td><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.3.9.&nbsp;Javadoc</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="environment.html">Prev</a>&nbsp;</td><th width="60%" align="center">4.3.&nbsp;Printer</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="header.html">Next</a></td></tr></table><hr></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="javadoc"></a>4.3.9.&nbsp;Javadoc</h3></div></div><div></div></div><p>
+Let's you control all Javadoc-related options. Refer to the
+<a href="http://java.sun.com/j2se/javadoc/index.html" target="_top">Javadoc home page</a>
+for more information about Sun's Javadoc tool.
+</p><div class="caution" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Incompatibility with Sun JDK 1.4</h3><p>
+Note that the Javadoc parsing for Jalopy may not work properly under Sun
+JDK 1.4 with the Client JVM. This seems to be a problem with the garbage
+collection. You may want to enable the Server JVM as a workaround.
+</p></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="javadoc-general"></a>4.3.9.1.&nbsp;General</h4></div></div><div></div></div><p>
+Controls the general handling of Javadoc comments.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="javadoc-format"></a>
+Parse/Format comments
+</p><a class="indexterm" name="d0e4420"></a><a class="indexterm" name="d0e4425"></a><p>
+Enables the parsing of existing Javadoc comments which in turn leads to a
+reformatting of the original comment style during the printing.
+</p><p>
+The used parser mostly supports HTML 3.2 and is not loose in a sense most browsers
+are these days: tags not contained in the standard will produce errors. And you
+should always strive to produce well-formed HTML
+(it works for the <tt class="literal">&lt;p&gt;</tt>, <tt class="literal">&lt;li&gt;</tt>,
+<tt class="literal">&lt;dd&gt;</tt>, <tt class="literal">&lt;dt&gt;</tt> and <tt class="literal">&lt;dir&gt;</tt>
+tags, but anyway).
+</p><p>
+Don't forget that the standard HTML metacharacters, such as less and greater signs
+(<tt class="literal">&lt;</tt>, <tt class="literal">&gt;</tt>) or the ambersand (<tt class="literal">&amp;</tt>), ...
+and the commercial "at" sign (<tt class="literal">@</tt>) needs to be
+escaped if not used as part of another HTML or Javadoc tag.
+</p><div class="table"><a name="tab-character-entities"></a><p class="title"><b>Table&nbsp;4.2.&nbsp;Character entities</b></p><table summary="Character entities" border="0" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; "><colgroup><col><col><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">Symbol</th><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">Numeric Entity</th><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">Named Entity</th><th style="border-bottom: 0.5pt solid ; ">Description</th></tr></thead><tbody><tr style="border-bottom: 0.5pt solid ; " valign="top"><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;038;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;amp</td><td style="border-bottom: 0.5pt solid ; " valign="top">Ambersand</td></tr><tr style="border-bottom: 0.5pt solid ; " valign="top"><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&lt;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;060;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;lt;</td><td style="border-bottom: 0.5pt solid ; " valign="top">Less than</td></tr><tr style="border-bottom: 0.5pt solid ; " valign="top"><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&gt;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;062;</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="center" valign="top">&amp;gt;</td><td style="border-bottom: 0.5pt solid ; " valign="top">Greater than</td></tr><tr valign="top"><td style="border-right: 0.5pt solid ; " align="center" valign="top">@</td><td style="border-right: 0.5pt solid ; " align="center" valign="top">&amp;064;</td><td style="border-right: 0.5pt solid ; " valign="top">&nbsp;</td><td style="" valign="top">Commercial "at" sign</td></tr></tbody></table></div><p></p><div class="example"><a name="ex-escape-html"></a><p class="title"><b>Example&nbsp;4.145.&nbsp;Escaping characters in Javadoc comments</b></p><p>Don't use</p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="screen">
+/**
+ * @author &lt;a href="mailto:first.last@company.com"&gt;first.last<span class="bold"><b>@</b></span>company.com&lt;/a&gt;
+ */
+</pre></td></tr></table><p>But rather use</p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="screen">
+/**
+ * @author &lt;a href="mailto:first.last@company.com"&gt;first.last<span class="bold"><b>&amp;064;</b></span>company.com&lt;/a&gt;
+ */
+</pre></td></tr></table></div><p></p></li><li><p><a name="javadoc-correct"></a>
+Correct tags
+</p><a class="indexterm" name="d0e4534"></a><a class="indexterm" name="d0e4539"></a><a class="indexterm" name="d0e4542"></a><p>
+Enables the auto-insertion or -removal of missing and obsolete Javadoc tags (all but the <tt class="literal">@throws</tt> tag, see below) and
+the correction of misspelled Javadoc tag names.
+</p></li><li><p><a name="javadoc-correct-throws"></a>
+Correct @throws tags
+</p><p>
+Controls the auto-correction for <tt class="literal">@throws</tt> tags. If enabled,
+Jalopy enforces a distinct <tt class="literal">@throws</tt> tag for every exception
+thrown by a method/constructor. Thus, if a method only declares to throw an
+<tt class="classname">IOException</tt> but throws a <tt class="classname">FileNotFoundException</tt>
+(which is a subclass of the former) too, Jalopy will add a declaration for the latter.
+</p></li></ul></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="javadoc-generation"></a>4.3.9.2.&nbsp;Generation</h4></div></div><div></div></div><p>
+Controls the auto-generation of missing Javadoc comments.
+</p><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="javadoc-generation-selection"></a>4.3.9.2.1.&nbsp;Element/Level</h5></div></div><div></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+Element/Level
+</p><p>
+Lets you selectively enable the auto-generation of missing Javadoc comments for
+specific class elements and access levels.
+</p></li><li><p>
+Include inner classes
+</p><p>
+Enables the auto-generation feature for inner classes, too. The
+auto-generation does not apply to anonymous inner classes.
+</p></li></ul></div></div><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="javadoc-misc"></a>4.3.9.2.2.&nbsp;Misc</h5></div></div><div></div></div><p>
+Let's you control miscellaneous Javadoc settings.
+</p><div class="itemizedlist"><ul type="disc"><li><p>
+Field comments in single line
+</p><p>
+Let's you specify how Javadoc comments of fields, that fit into one line, should be printed.
+</p><div class="example"><a name="ex-javadoc-field"></a><p class="title"><b>Example&nbsp;4.146.&nbsp;Field Javadoc comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+/**
+ * What history policy should be used?
+ */
+private History.Policy _historyPolicy = History.Policy.DISABLED;
+</pre></td></tr></table></div><p>
+If enabled, Javadoc comments for fields will be printed in a single line,
+if possible.
+</p><div class="example"><a name="ex-javadoc-field-short"></a><p class="title"><b>Example&nbsp;4.147.&nbsp;Field Javadoc comment (shortened)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+/** What history policy should be used? */
+private History.Policy _historyPolicy = History.Policy.DISABLED;
+</pre></td></tr></table></div><p>
+Note that this switch does not take affect for field template comments,
+as template are not parsed but inserted as-is.
+</p><p>
+Note further that the <a href="javadoc.html#javadoc-format">Javadoc parsing</a>
+must be enabled for this feature to work.
+</p></li></ul></div></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="javadoc-templates"></a>4.3.9.3.&nbsp;Templates</h4></div></div><div></div></div><p>
+Let's you define templates to be inserted for the different declaration elements.
+Each element (Class, Interface, Constructor, Method and Field) has its
+own template.
+</p><p>
+Depending on the element type, a template consists of up to five parts that
+together form a valid Javadoc comment. Note that the resulting comment will
+be inserted as-is, and it is your responsibility to define the templates
+in a consistent style.
+</p><p>
+You can use variable expressions throughout your templates. Read
+<a href="environment.html" title="4.3.8.&nbsp;Environment">Section&nbsp;4.3.8, &#8220;Environment&#8221;</a> for more information about this feature.
+</p></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="javadoc-tags"></a>4.3.9.4.&nbsp;Custom Tags</h4></div></div><div></div></div><p>
+Allows the definition of custom Javadoc tags to aid the syntax checking of
+Javadoc comments, and enable the auto-correction of misspelled custom tag names.
+</p><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="javadoc-tags-standard"></a>4.3.9.4.1.&nbsp;Standard Tags</h5></div></div><div></div></div><p>
+Allows the definition of custom Javadoc standard tag names. The current build-in Standard
+tags are:
+<tt class="literal">@author</tt>,
+<tt class="literal">@deprecated</tt>,
+<tt class="literal">@exception</tt>,
+<tt class="literal">@param</tt>,
+<tt class="literal">@return</tt>,
+<tt class="literal">@see</tt>,
+<tt class="literal">@serial</tt>,
+<tt class="literal">@serialData</tt>,
+<tt class="literal">@serialField</tt>,
+<tt class="literal">@since</tt>,
+<tt class="literal">@throws</tt>,
+<tt class="literal">@todo</tt>,
+<tt class="literal">@version</tt>
+</p><p>
+Use the <span><b class="guibutton">Add...</b></span> and <span><b class="guibutton">Remove</b></span> buttons
+to add or remove items from the list.
+</p><p>
+Valid standard tag names have the form
+<tt class="literal">@[a-zA-Z]+</tt>, e.g. <tt class="literal">@exclude</tt>.
+</p></div><div class="sect4" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="javadoc-tags-inline"></a>4.3.9.4.2.&nbsp;In-line Tags</h5></div></div><div></div></div><p>
+Allows the definition of custom Javadoc in-line tag names.
+The current build-in In-line tags are:
+<tt class="literal">@docRoot</tt>,
+<tt class="literal">@inheritDoc</tt>,
+<tt class="literal">@link</tt>,
+<tt class="literal">@linkPlain</tt>,
+<tt class="literal">@value</tt>
+</p><p>
+Use the <span><b class="guibutton">Add...</b></span> and <span><b class="guibutton">Remove</b></span> buttons
+to add or remove items from the list.
+</p><p>
+Valid in-line tag names have the form
+<tt class="literal">@[a-zA-Z]+</tt>, e.g. <tt class="literal">@mylink</tt>.
+</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="environment.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="printer.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="header.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4.3.8.&nbsp;Environment&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;4.3.10.&nbsp;Header</td></tr></table></div></td></tr></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2004, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+    <!ELEMENT root EMPTY>
+]>
+
+<root xml:space='preserve'/>
+
+    <!-- all attributes must be declared -->

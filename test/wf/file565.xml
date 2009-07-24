@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc
+[
+<!ELEMENT doc (#PCDATA)>
+<!ENTITY % pe "<!--replacement decl-->">
+<!ENTITY
+  %
+  pe2
+  "<!--replacement decl-->"
+  >
+]>
+<doc/>

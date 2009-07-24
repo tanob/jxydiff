@@ -1,0 +1,117 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>4.3.6.&nbsp;Comments</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><link rel="home" href="manual.html" title="Jalopy User Manual"><link rel="up" href="printer.html" title="4.3.&nbsp;Printer"><link rel="previous" href="separation.html" title="4.3.5.&nbsp;Blank Lines"><link rel="next" href="imports.html" title="4.3.7.&nbsp;Imports"><link rel="preface" href="dedication.html" title="Dedication"><link rel="preface" href="acknowledge.html" title="Acknowledgements"><link rel="preface" href="introduction.html" title="Introduction"><link rel="part" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="chapter" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="chapter" href="build.html" title="Chapter&nbsp;2.&nbsp;Building"><link rel="chapter" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="chapter" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="part" href="part-plugins.html" title="Part&nbsp;II.&nbsp;Plug-ins"><link rel="chapter" href="plugin-ant.html" title="Chapter&nbsp;5.&nbsp;Ant Plug-in task"><link rel="chapter" href="plugin-console.html" title="Chapter&nbsp;6.&nbsp;Console Application"><link rel="chapter" href="plugin-eclipse.html" title="Chapter&nbsp;7.&nbsp;Eclipse Plug-in"><link rel="chapter" href="plugin-jbuilder.html" title="Chapter&nbsp;8.&nbsp;JBuilder OpenTool"><link rel="chapter" href="plugin-jdev.html" title="Chapter&nbsp;9.&nbsp;JDeveloper Extension"><link rel="chapter" href="plugin-jedit.html" title="Chapter&nbsp;10.&nbsp;jEdit Plug-in"><link rel="chapter" href="plugin-netbeans.html" title="Chapter&nbsp;11.&nbsp;NetBeans/Sun ONE Studio module"><link rel="appendix" href="dependencies.html" title="Appendix&nbsp;A.&nbsp;Library Dependencies"><link rel="appendix" href="license-bsd.html" title="Appendix&nbsp;B.&nbsp;The Jalopy BSD License"><link rel="appendix" href="license-antlr.html" title="Appendix&nbsp;C.&nbsp;ANTLR SOFTWARE RIGHTS"><link rel="appendix" href="license-apache.html" title="Appendix&nbsp;D.&nbsp;The Apache Software License, Version 1.1"><link rel="appendix" href="license-gnu.html" title="Appendix&nbsp;E.&nbsp;GNU GENERAL PUBLIC LICENSE Version 2, June 1991"><link rel="appendix" href="license-gnu-doc.html" title="Appendix&nbsp;F.&nbsp;GNU Free Documentation License Version 1.1, March 2000"><link rel="appendix" href="license-common-public.html" title="Appendix&nbsp;G.&nbsp;Common Public License Version 1.0"><link rel="appendix" href="license-sun-public.html" title="Appendix&nbsp;H.&nbsp;SUN PUBLIC LICENSE Version 1.0"><link rel="index" href="ix01.html" title="Index"><link rel="subsection" href="comments.html#coments-remove" title="4.3.6.1.&nbsp;Remove"><link rel="subsection" href="comments.html#coments-format" title="4.3.6.2.&nbsp;Format">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="left"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                    <a href="./history.html" class="navlink2">History</a> |
+                    <a href="./manual.html" class="navlink2">Manual</a> |
+                    <a href="./faq.html" class="navlink2">FAQ</a> |
+                    <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+                    This page generated: <strong>June 8 2004</strong></td></tr></tbody></table><table border="0" width="100%" cellspacing="0" cellpadding="5"><tr><td><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.3.6.&nbsp;Comments</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="separation.html">Prev</a>&nbsp;</td><th width="60%" align="center">4.3.&nbsp;Printer</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="imports.html">Next</a></td></tr></table><hr></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="comments"></a>4.3.6.&nbsp;Comments</h3></div></div><div></div></div><p>
+Controls how Jalopy handles certain types of comments.
+</p><p>
+As far as Jalopy is concerned, there are five types of comments:
+
+</p><div class="orderedlist"><ol type="1"><li><p><a name="comments-single"></a>
+Single-line comments <tt class="literal">// text</tt>
+</p><a class="indexterm" name="d0e3757"></a><a class="indexterm" name="d0e3762"></a><p>
+An <span class="emphasis"><em>end-of-line comment</em></span>: all text from the ASCII characters
+<tt class="literal">//</tt> to the end of the line
+</p><div class="example"><a name="ex-comments-single"></a><p class="title"><b>Example&nbsp;4.130.&nbsp;Single-line comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+<span class="bold"><b>// [PENDING] this should be part of the ErrorManager</b></span>
+</pre></td></tr></table></div><p></p></li><li><p><a name="comments-multi"></a>
+Multi-line comments <tt class="literal">/* text */</tt>
+</p><a class="indexterm" name="d0e3788"></a><a class="indexterm" name="d0e3793"></a><p>
+A <span class="emphasis"><em>traditional comment</em></span>: all text from the ASCII characters <tt class="literal">/*</tt>
+to the ASCII characters <tt class="literal">*/</tt>
+</p><div class="example"><a name="ex-comments-multi"></a><p class="title"><b>Example&nbsp;4.131.&nbsp;Multi-line comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+<span class="bold"><b>/* public int getSubregionStartOffset(int line, int subregion)
+{
+	ChunkCache.LineInfo[] lineInfos = chunkCache.getLineInfosForPhysicalLine(line);
+	return buffer.getLineStartOffset(lineInfos[subregion].physicalLine)
+		+ lineInfos[subregion].offset;
+} */</b></span>
+</pre></td></tr></table></div><p></p></li><li><p><a name="comments-javadoc"></a>
+Javadoc comments <tt class="literal">/** text */</tt>
+</p><a class="indexterm" name="d0e3822"></a><a class="indexterm" name="d0e3827"></a><p>
+A <span class="emphasis"><em>documentation comment</em></span>: actually a special kind of
+multi-line comment as defined by the Sun Javadoc specification;
+all text from the ASCII characters <tt class="literal">/**</tt>
+to the ASCII characters <tt class="literal">*/</tt>
+</p><div class="example"><a name="ex-comments-javadoc"></a><p class="title"><b>Example&nbsp;4.132.&nbsp;Javadoc comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+<span class="bold"><b>/**
+ * A scroll listener will be notified when the text area is scrolled, either
+ * horizontally or vertically.
+ *
+ * @author Slava Pestov
+ * @since jEdit 3.2pre2
+ */</b></span>
+</pre></td></tr></table></div><p></p></li><li><p><a name="comments-separator"></a>
+Separator comments <tt class="literal">//~ text</tt>
+</p><a class="indexterm" name="d0e3856"></a><a class="indexterm" name="d0e3861"></a><p>
+A Jalopy-specific <span class="emphasis"><em>separator comment</em></span>: actually a special kind of single-line comment;
+all text from the ASCII characters
+<tt class="literal">//~</tt> to the end of the line
+</p><div class="example"><a name="ex-comments-separator"></a><p class="title"><b>Example&nbsp;4.133.&nbsp;Separator comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+<span class="bold"><b>//~ Inner classes .......................................</b></span>
+</pre></td></tr></table></div><p></p></li><li><p><a name="comments-pragma"></a>
+Pragma comments <tt class="literal">//J[directive]</tt>
+</p><a class="indexterm" name="d0e3887"></a><a class="indexterm" name="d0e3892"></a><p>
+A Jalopy-specific <span class="emphasis"><em>control comment</em></span>: actually a special kind of single-line comment;
+all text from the ASCII characters
+<tt class="literal">//J[-|+]</tt> to the end of the line
+</p><div class="example"><a name="ex-comments-control"></a><p class="title"><b>Example&nbsp;4.134.&nbsp;Control comments</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+<span class="bold"><b>//J-</b></span>
+    if {condition()) return value;
+<span class="bold"><b>//J+</b></span>
+</pre></td></tr></table></div><p>
+Currently, Jalopy recognizes two pragma comments: <tt class="literal">//J-</tt> and <tt class="literal">//J+</tt>
+</p><p>
+With these comments you can disable formatting for certain code sections.
+<tt class="literal">//J-</tt> tells Jalopy to disable formatting until <tt class="literal">//J+</tt>
+will enable it again. Note that these comments can only be used in conjunction! Omitting the <tt class="literal">//J+</tt> will certainly produce errors.
+</p></li></ol></div><p>
+</p><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="coments-remove"></a>4.3.6.1.&nbsp;Remove</h4></div></div><div></div></div><p>
+Controls whether and what types of comments should be removed during the
+formatting process.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="comments-remove-single"></a>
+Single-line comments
+</p><a class="indexterm" name="d0e3943"></a><a class="indexterm" name="d0e3948"></a><p>
+If enabled, removes all single-line comments found in a source file.
+</p></li><li><p><a name="comments-remove-multi"></a>
+Multi-line comments
+</p><a class="indexterm" name="d0e3956"></a><a class="indexterm" name="d0e3961"></a><p>
+If enabled, removes all multi-line comments (sometimes called block comments) found in a source file.
+</p></li><li><p><a name="comments-remove-javadoc"></a>
+Javadoc comments
+</p><a class="indexterm" name="d0e3969"></a><a class="indexterm" name="d0e3974"></a><p>
+If enabled, removes all Javadoc comments found in a source file. This may prove
+useful in conjunction with the <a href="javadoc.html#javadoc-generation" title="4.3.9.2.&nbsp;Generation">Javadoc auto-generation capabilities</a>
+to build Javadoc from scratch.
+</p></li></ul></div></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="coments-format"></a>4.3.6.2.&nbsp;Format</h4></div></div><div></div></div><p>
+Controls the reformatting of comments.
+</p><div class="itemizedlist"><ul type="disc"><li><p><a name="comments-format-multi"></a>
+Multi-line comments
+</p><a class="indexterm" name="d0e3991"></a><a class="indexterm" name="d0e3996"></a><p>
+Enables the reformatting of multi-line comments. Only affects the leading
+asterixes of consecutive comment lines as shown in the examples below.
+</p><div class="example"><a name="ex-comments-multi-line"></a><p class="title"><b>Example&nbsp;4.135.&nbsp;Multi-line comment</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+/* Multi-line
+* comment.
+* end.
+*/
+</pre></td></tr></table></div><p></p><div class="example"><a name="ex-comments-multi-line-formatted"></a><p class="title"><b>Example&nbsp;4.136.&nbsp;Multi-line comment (reformatted)</b></p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="programlisting">
+/* Multi-line
+ * comment.
+ * end.
+ */
+</pre></td></tr></table></div><p></p></li></ul></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="separation.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="printer.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="imports.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4.3.5.&nbsp;Blank Lines&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;4.3.7.&nbsp;Imports</td></tr></table></div></td></tr></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2004, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

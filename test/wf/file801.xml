@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc [
+<!ELEMENT doc (a | b)>
+<!ELEMENT a (#PCDATA)>
+]>
+<doc><a></a></doc>

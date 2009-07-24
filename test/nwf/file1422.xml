@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+    <!-- Web-SGML-ism:  global attlist types -->
+
+    <!ELEMENT root EMPTY>
+
+    <!ATTLIST #ALL
+	TreeType CDATA #REQUIRED
+	>
+]>
+
+<root/>

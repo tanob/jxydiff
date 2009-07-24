@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc SYSTEM "006.ent" [
+<!ATTLIST doc a1 CDATA "v1">
+]>
+<doc></doc>

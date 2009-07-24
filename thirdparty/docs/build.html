@@ -1,0 +1,124 @@
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;2.&nbsp;Building</title><link rel="stylesheet" href="site.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.65.1"><link rel="home" href="manual.html" title="Jalopy User Manual"><link rel="up" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="previous" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="next" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="preface" href="dedication.html" title="Dedication"><link rel="preface" href="acknowledge.html" title="Acknowledgements"><link rel="preface" href="introduction.html" title="Introduction"><link rel="part" href="part-core.html" title="Part&nbsp;I.&nbsp;Jalopy core"><link rel="chapter" href="installation.html" title="Chapter&nbsp;1.&nbsp;Installation"><link rel="chapter" href="build.html" title="Chapter&nbsp;2.&nbsp;Building"><link rel="chapter" href="usage.html" title="Chapter&nbsp;3.&nbsp;Usage"><link rel="chapter" href="settings.html" title="Chapter&nbsp;4.&nbsp;Settings"><link rel="part" href="part-plugins.html" title="Part&nbsp;II.&nbsp;Plug-ins"><link rel="chapter" href="plugin-ant.html" title="Chapter&nbsp;5.&nbsp;Ant Plug-in task"><link rel="chapter" href="plugin-console.html" title="Chapter&nbsp;6.&nbsp;Console Application"><link rel="chapter" href="plugin-eclipse.html" title="Chapter&nbsp;7.&nbsp;Eclipse Plug-in"><link rel="chapter" href="plugin-jbuilder.html" title="Chapter&nbsp;8.&nbsp;JBuilder OpenTool"><link rel="chapter" href="plugin-jdev.html" title="Chapter&nbsp;9.&nbsp;JDeveloper Extension"><link rel="chapter" href="plugin-jedit.html" title="Chapter&nbsp;10.&nbsp;jEdit Plug-in"><link rel="chapter" href="plugin-netbeans.html" title="Chapter&nbsp;11.&nbsp;NetBeans/Sun ONE Studio module"><link rel="appendix" href="dependencies.html" title="Appendix&nbsp;A.&nbsp;Library Dependencies"><link rel="appendix" href="license-bsd.html" title="Appendix&nbsp;B.&nbsp;The Jalopy BSD License"><link rel="appendix" href="license-antlr.html" title="Appendix&nbsp;C.&nbsp;ANTLR SOFTWARE RIGHTS"><link rel="appendix" href="license-apache.html" title="Appendix&nbsp;D.&nbsp;The Apache Software License, Version 1.1"><link rel="appendix" href="license-gnu.html" title="Appendix&nbsp;E.&nbsp;GNU GENERAL PUBLIC LICENSE Version 2, June 1991"><link rel="appendix" href="license-gnu-doc.html" title="Appendix&nbsp;F.&nbsp;GNU Free Documentation License Version 1.1, March 2000"><link rel="appendix" href="license-common-public.html" title="Appendix&nbsp;G.&nbsp;Common Public License Version 1.0"><link rel="appendix" href="license-sun-public.html" title="Appendix&nbsp;H.&nbsp;SUN PUBLIC LICENSE Version 1.0"><link rel="index" href="ix01.html" title="Index"><link rel="subsection" href="build.html#build-prerequisites" title="2.1.&nbsp;Prerequisites"><link rel="subsection" href="build.html#build-build" title="2.2.&nbsp;Building">
+      <meta name="description" content="Jalopy Java Source Code Formatter Beautifier Pretty Printer"> 
+      <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://jalopy.sf.net" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://jalopy.sf.net" r (n 0 s 0 v 0 l 0))'> 
+    </head><body id="toppage" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><table width="700" border="0" cellpadding="0" cellspacing="0" align="left"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #336699"><tbody><tr><td height="16"></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr style="border:none"><td style="border:none"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="logo">JALOPY</td><td class="sublogo" valign="bottom">Java Source Code Formatter Beautifier Pretty Printer</td></tr></tbody></table></td></tr><tr><td bgcolor="#3399cc" height="1"></td></tr><tr><td height="10"></td></tr><tr><td bgcolor="#ff8000" height="4"></td></tr><tr><td height="20" bgcolor="#336699" style="color:#ffffff;padding-left:10px"><a href="./index.html" class="navlink">Overview</a> &#149;
+                    <a href="./download.html" class="navlink">Download</a> &#149;
+                    <a href="./docs.html" class="navlink">Documentation</a> &#149;
+                    <a href="./plugins.html" class="navlink">Plug-ins</a> &#149;
+                    <a href="./links.html" class="navlink">Links</a> &#149;
+                    <a href="./contact.html" class="navlink">Contact</a></td></tr><tr><td height="1" bgcolor="#ffffff"></td></tr></tbody></table></td></tr><tr valign="top"><td valign="top" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20" bgcolor="#faebd7" style="padding-left:15px"><a href="./features.html" class="navlink2">Features</a> |
+                    <a href="./history.html" class="navlink2">History</a> |
+                    <a href="./manual.html" class="navlink2">Manual</a> |
+                    <a href="./faq.html" class="navlink2">FAQ</a> |
+                    <a href="./api/index.html" class="navlink2">Javadoc</a></td></tr><tr><td height="20" bgcolor="#ffffff"></td></tr><tr><td bgcolor="#eeeecc" height="17" align="right" style="font-size:10px;padding-right:3px">
+                    This page generated: <strong>June 8 2004</strong></td></tr></tbody></table><table border="0" width="100%" cellspacing="0" cellpadding="5"><tr><td><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;2.&nbsp;Building</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="installation.html">Prev</a>&nbsp;</td><th width="60%" align="center">Part&nbsp;I.&nbsp;Jalopy core</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="usage.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="build"></a>Chapter&nbsp;2.&nbsp;Building</h2></div></div><div></div></div><a class="indexterm" name="d0e706"></a><p>
+Explains the steps involved in building Jalopy from the sources.
+</p><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="build-prerequisites"></a>2.1.&nbsp;Prerequisites</h4></div></div><div></div></div><a class="indexterm" name="d0e716"></a><p>
+The following software must be installed separately, in order to build from the
+sources:
+</p><div class="table"><a name="tab-build-prerequisites"></a><p class="title"><b>Table&nbsp;2.1.&nbsp;Software needed to build from the sources</b></p><table summary="Software needed to build from the sources" border="0" style="border-collapse: collapse;"><colgroup><col><col></colgroup><tbody><tr><td style="" valign="top">Jakarta Ant</td><td style="">
+Jalopy comes with a simple, Ant-based build system. So you first need to obtain and
+install Ant as outlined in the
+<a href="http://jakarta.apache.org/ant/manual/install.html" target="_top">Ant manual</a>.
+The build system is only tested against the Ant 1.5.4 release, but later
+releases of Ant may also work.
+</td></tr><tr><td style="" valign="top">Oasis DocBook XML DTD</td><td style="">
+All documentation is written using DocBook Version 4.2 markup. You can get the DTD
+from the
+<a href="http://www.oasis-open.org/committees/docbook/xml/4.2/index.shtml" target="_top">OASIS web site</a>.
+Unpack the sources into a folder of your choice and remember this path as it will be
+needed for configuration later on.
+</td></tr><tr><td style="" valign="top">An XSLT processor</td><td style="">
+The DocBook markup needs to be transformed in order to make some user-friendly appearance.
+This is done via XSLT and Michael Kay's Saxon is the processor I found working with the
+Stylesheet package I use. You should download the current stable production
+release from SourceForge (<a href="http://saxon.sf.net" target="_top">http://saxon.sf.net</a>)
+and extract the file <tt class="filename">saxon.jar</tt> into the <tt class="filename">/lib</tt>
+folder of your Ant installation directory.  I also had to setup saxon to use
+Xerces as the XML parser by editing the
+META-INF/services/javax.xml.parsers.SAXParserFactory file inside of
+saxon.jar and replacing the alfred parser with org.apache.xerces.jaxp.SAXParserFactoryImpl
+</td></tr><tr><td style="" valign="top">DocBook XSL Stylesheets</td><td style="">
+To perform the markup translation you need Norman Walsh's XSL Stylesheet package.
+The version that works for me is 1.62.4. You can get it from SourceForge
+(<a href="http://docbook.sf.net" target="_top">http://docbook.sf.net</a>).
+Copy the file <tt class="filename">extensions/saxon651.jar</tt> that
+comes with the distribution into the <tt class="filename">/lib</tt> folder of your
+Ant installation directory as this file is needed for sophisticated table generation.
+</td></tr><tr><td style="" valign="top">A CVS client (optional)</td><td style="">
+If you plan to get the sources directly from CVS you need a CVS client. If your system
+does not come with one pre-installed (most Linux machines at least have the command-line
+client installed by default), you will certainly want to visit any of several good sites
+such as <a href="http://www.cvshome.org/" target="_top">http://www.cvshome.org/</a>
+which <a href="http://www.cvshome.org/dev/codes.html" target="_top">lists</a> available CVS clients
+for different platforms, their strengths and weaknesses. For what it's worth, I prefer
+<a href="http://www.smartcvs.com" target="_top">SmartCVS</a>.
+</td></tr></tbody></table></div><p></p></div><div class="sect3" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="build-build"></a>2.2.&nbsp;Building</h4></div></div><div></div></div><p>
+The basic steps to build Jalopy from the sources are:
+</p><div class="orderedlist"><ol type="1"><li><p>
+Get and install the needed software as outlined in <a href="build.html#build-prerequisites" title="2.1.&nbsp;Prerequisites">Section&nbsp;2.1, &#8220;Prerequisites&#8221;</a>.
+Make sure Ant is set up correctly.
+</p></li><li><p>
+Get the sources. Either download and unpack the
+<a href="./download.html#source" target="_top">Jalopy source distribution</a> which
+contains the complete Jalopy sources. Or grab the needed modules directly from the
+<a href="http://sourceforge.net/cvs/?group_id=45216" target="_top">CVS</a> tree.</p></li><li><p>
+Change to the directory where your Jalopy sources reside. You should find a
+directory layout somewhat similar to the following (each directory represents a
+module; the minimal needed modules are printed in <span class="emphasis"><em>bold</em></span>):
+</p><table border="0" bgcolor="#E0E0E0" class="shade"><tr><td><pre class="screen">
+ ..
+   ant/                  The Ant Plug-in
+   <span class="bold"><b>build/</b></span>                The Jalopy build system
+   console/
+   <span class="bold"><b>docu/</b></span>                 All documentation sources
+   eclipse/              The Eclipse Plug-in
+   jbuilder/             The JBuilder Plug-in
+   jdeveloper/           The JDeveloper Plug-in
+   jedit/                The jEdit Plug-in
+   <span class="bold"><b>main/</b></span>                 The core Jalopy sources
+   netbeans/             The NetBeans/Sun ONE Studio Plug-in
+</pre></td></tr></table><p>
+Change directory into <tt class="filename">/build</tt> where the master build script
+lurks.
+</p></li><li><p>
+Adjust the global build properties to match your installation. The build
+system uses quite a few properties to control the build process and
+specify additional needed resources. You can find and adjust these properties in the file
+<tt class="filename">build.properties</tt>.
+</p><p>
+Luckily you only have to change some common properties to get things running:
+</p><div class="variablelist"><p class="title"><b>Common build properties</b></p><dl><dt><span class="term">DIR.DOCBOOK.XSL</span></dt><dd><p>
+Specifies the installation directory of the DocBook XSL Stylesheets package.
+Note that you have to specify a protocol, e.g. <tt class="filename">file:///G:/XML/docbook-xsl-1.62.4</tt>.
+</p></dd><dt><span class="term">DIR.DOCBOOK.DTD</span></dt><dd><p>
+Specifies the path where to find the DocBook XSL DTD.
+You have to adjust the default path to match your installation.
+</p></dd><dt><span class="term">LIB.PATH.<i class="replaceable"><tt>&lt;modulename&gt;</tt></i></span></dt><dd><p>
+Specifies additional library path(s) needed to build a certain module.
+You have to adjust the default path(s) to match your installation.
+</p></dd><dt><span class="term">PACKAGE.PATH.<i class="replaceable"><tt>&lt;libraryname&gt;</tt></i></span></dt><dd><p>
+Specifies the location to a directory containing the package-list file for a
+given library. This is optional and only needed by Javadoc to resolve links to
+documentation for externally referenced classes. Change the default path(s)
+to match your installation.
+</p></dd></dl></div></li><li><p>
+Once everything is set up, you can start a build using <span><b class="command">ant</b></span> <i class="parameter"><tt>target</tt></i>
+where <i class="parameter"><tt>target</tt></i> describes one of the main build targets (those with a
+description, use <span><b class="command">ant</b></span> <i class="parameter"><tt>-projecthelp</tt></i> to display
+the available targets). Just typing <span><b class="command">ant</b></span> will build the Jalopy
+core runtime distribution.
+</p></li><li><p>
+When a build is done, you can find the created distribution(s) in the
+<tt class="filename">tmp~/dist</tt> folder. The build system creates and stores all
+intermediate files and subdirectories under the <tt class="filename">tmp~</tt>
+directory.
+</p></li><li><p>
+If you make changes to the source code, just run Ant again; this will perform a
+faster <i class="firstterm">incremental</i> rebuild of the target.
+</p></li></ol></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="installation.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="part-core.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="usage.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;1.&nbsp;Installation&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Usage</td></tr></table></div></td></tr></table></td></tr><tr><td bgcolor="#eeeecc" height="17" style="font-size:9px;padding-left:5px"><a href="#toppage">to top</a></td></tr><tr><td height="30"><br></td></tr><tr><td height="3"></td></tr><tr><td bgcolor="#336699" height="1"></td></tr><tr><td height="1"></td></tr><tr><td bgcolor="#336699" height="16"></td></tr><tr><td bgcolor="#ff9966" height="4"></td></tr><tr><td class="footer" align="center" height="15" valign="middle">
+            Copyright &copy; 2001-2004, <a class="footer" href="./contact.html">Marco Hunsicker</a>. All rights reserved. Hosted by <a href="http://sourceforge.net">SourceForge.net</a></td></tr></tbody></table><img src="http://sourceforge.net/sflogo.php?group_id=45216&amp;type=1" width="1" height="1" border="0" hspace="0" vspace="0" alt=""></body></html>

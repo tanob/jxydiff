@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc [
+<!ENTITY e PUBLIC ";!*#@$_%" "100.xml">
+<!ELEMENT doc (#PCDATA)>
+]>
+<doc></doc>

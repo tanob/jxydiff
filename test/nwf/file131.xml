@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE book [
+<!ELEMENT book ANY>
+]>
+<!-- IllegalChar #x19
+ in p02:  -->
+<book/>

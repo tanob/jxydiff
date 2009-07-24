@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE doc
+[
+<!NOTATION unknot PUBLIC "Unknown">
+<!ENTITY % pe SYSTEM "nop.ent" NDATA unknot>
+]>
+<doc/>
