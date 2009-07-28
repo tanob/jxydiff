@@ -1,0 +1,9 @@
+= Jxydiff
+
+This is a Java library to compute the difference between XML files. It is a port of the original's C++ version Xydiff to Java that I found at [1] while working on a project. The Xydiff C++ implementation was done by Gregory Cobéna.
+
+During the project I found a bug in the library and tried to contact the authors. As I didn't get an answer from them I took the initiative to import it here at github and fix the library's bugs.
+
+[1] http://potiron.loria.fr/projects/jxydiff
+
+
