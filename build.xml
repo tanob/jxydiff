@@ -1,4 +1,4 @@
-<project basedir="." name="jxydiff" default="compile">
+<project basedir="." name="jxydiff" default="jar">
 	<!-- Properties -->
 	<property name="src.dir" value="${basedir}/src" />
 	<property name="thirdparty.dir" value="${basedir}/thirdparty" />
