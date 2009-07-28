@@ -1,4 +1,4 @@
-<project basedir="." name="tree" default="compile">
+<project basedir="." name="jxydiff" default="compile">
 	<!-- Properties -->
 	<property name="src.dir" value="${basedir}/src" />
 	<property name="thirdparty.dir" value="${basedir}/thirdparty" />
@@ -9,6 +9,7 @@
 	<property name="all.classes.dir" value="${build.dir}/lib/classes" />
 	<property name="jalopy.dir" value="${thirdparty.dir}/bin" />
 	<property name="src-test.dir" value="${basedir}/src-test"/>
+	<property name="antlr.dir" value="${src.dir}/fr/loria/ecoo/so6/antlr"/>
 
 	<!-- Default class path -->
 	<path id="default.class.path">
@@ -25,16 +26,33 @@
 		<mkdir dir="${classes.dir}" />
 		<mkdir dir="${jar.dir}" />
 	</target>
+	
 	<!-- clean -->
 	<target name="clean">
 		<delete dir="${build.dir}" />
+		<delete>
+			<fileset dir="${antlr.dir}">
+			    <include name="XMLLexer.java"/>
+				<include name="XMLParser.java"/>
+			</fileset>
+		</delete>
 	</target>
+	
+	<!-- generate the XML lexer/parser using ANTLR -->
+	<target name="compile-antlr-grammar">
+		<java fork="true" classname="antlr.Tool" 
+				classpath="${thirdparty.dir}/antlr.jar"
+				dir="${antlr.dir}"
+				args="xml.g" />
+	</target>
+	
 	<!-- compile -->
-	<target name="compile" depends="init" description="Compile the source code">
+	<target name="compile" depends="init, compile-antlr-grammar" description="Compile the source code">
 		<javac source="1.4" classpathref="default.class.path" destdir="${classes.dir}" debug="true">
 			<src location="${src.dir}" />
 		</javac>
 	</target>
+	
 	<!-- jar -->
 	<target name="jar" depends="compile" description="Make a jar of the so6 lib">
 		<delete dir="${all.classes.dir}" />
