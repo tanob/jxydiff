@@ -42,13 +42,14 @@
 	<target name="compile-antlr-grammar">
 		<java fork="true" classname="antlr.Tool" 
 				classpath="${thirdparty.dir}/antlr.jar"
-				dir="${antlr.dir}"
-				args="xml.g" />
+				dir="${antlr.dir}">
+			<arg value="xml.g" />
+		</java>
 	</target>
 	
 	<!-- compile -->
 	<target name="compile" depends="init, compile-antlr-grammar" description="Compile the source code">
-		<javac source="1.4" classpathref="default.class.path" destdir="${classes.dir}" debug="true">
+		<javac source="5" classpathref="default.class.path" destdir="${classes.dir}" debug="true">
 			<src location="${src.dir}" />
 		</javac>
 	</target>
@@ -77,7 +78,7 @@
 			</fileset>
 		</jar>
 	</target>
-
+	
 	<!-- code formatter -->
 	<target name="format" depends="init" description="Source Code Formatter">
 		<taskdef name="jalopy" classname="de.hunsicker.jalopy.plugin.ant.AntPlugin" classpathref="default.class.path" />
