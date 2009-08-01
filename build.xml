@@ -19,7 +19,7 @@
 		</fileset>
 		<pathelement location="${classes.dir}" />
 	</path>
-
+	
 	<!-- init -->
 	<target name="init">
 		<mkdir dir="${build.dir}" />
@@ -43,8 +43,17 @@
 		<java fork="true" classname="antlr.Tool" 
 				classpath="${thirdparty.dir}/antlr.jar"
 				dir="${antlr.dir}">
+			<!--<arg value="-trace" />-->
 			<arg value="xml.g" />
 		</java>
+	</target>
+	
+	<target name="test" depends="compile">
+		<junit>
+			<classpath refid="default.class.path" />
+			<formatter type="brief" usefile="false" />
+			<test name="fr.loria.ecoo.xml.parser.test.XMLParserTest" />
+		</junit>
 	</target>
 	
 	<!-- compile -->

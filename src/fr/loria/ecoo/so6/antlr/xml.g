@@ -67,9 +67,8 @@ protected EXTENDER		: '\u00B7' | '\u02D0' | '\u02D1' | '\u0387' | '\u0640' | '\u
 protected NAMECHAR 		: LETTER | DIGIT | '.' | '-' | '_' | ':' | COMBININGCHAR | EXTENDER
 						;
 
+//NAME_START    	:	('a'..'z' | 'A'..'Z' | '_' | ':' | '-' | '0'..'9'  )+    
 
- 
-//NAME_START    	:	('a'..'z' | 'A'..'Z' | '_' | ':' | '-' | '0'..'9'  )+                       
 NAME_START    	:	(LETTER | '_' | ':')+                      
 				;
 NAME_SUITE		:	(NAMECHAR)+ //('.')+
@@ -91,10 +90,53 @@ TEXT			:	(~('a'..'z' | 'A'..'Z' | '_' | ':' | '-' | '0'..'9' | '<' | '>' |'"' | 
 
  
 
-
+{
+import java.util.ArrayList;
+}
 class XMLParser extends Parser ;
 options{
 	defaultErrorHandler = false;
+}
+{
+public static void joinSiblingTextNodes(TreeNode node) {
+		if (node.hasChildren()) {
+			int numChildren = node.getChildren().size();
+			TreeNode aux;
+			ArrayList<TreeNode> removedNodes = new ArrayList<TreeNode>();
+			int startPos = -1;
+			StringBuffer sb = new StringBuffer();
+			
+			for (int i=0; i < numChildren; i++) {
+				aux = node.getChild(i);
+				
+				if (aux instanceof TextNode) {
+					if (startPos == -1)
+						startPos = i;
+					else {
+						sb.append(((TextNode)aux).getContent());
+						removedNodes.add(aux);
+					}
+				}
+				else {
+					if (startPos != -1 && sb.length() != 0) {
+						((TextNode)node.getChild(startPos)).appendContent(sb.toString());
+						sb = new StringBuffer();
+					}
+					
+					startPos = -1;
+
+					if (aux instanceof ElementNode)
+						joinSiblingTextNodes(aux);
+				}
+			}
+			
+			if (startPos != -1 && sb.length() != 0)
+				((TextNode)node.getChild(startPos)).appendContent(sb.toString());
+			
+			for (TreeNode removedNode : removedNodes)
+				node.removeChild(removedNode);
+		}
+	}
 }
 
 document returns [Document doc=new Document();] throws Exception
@@ -104,11 +146,12 @@ document returns [Document doc=new Document();] throws Exception
 									(
 									 n=node { if (n!=null) doc.appendChild(n);} 
 									)* EOF
+									{ joinSiblingTextNodes(doc); }
 								;
 
 node returns [TreeNode n=null;] throws ParseException, AttributeAlreadyExist
 									: 	n=elem
-									|	n=misc 
+									|	n=misc
 									;
 
 prolog[Document d] throws Exception //String vers=null;]	
@@ -307,7 +350,7 @@ misc returns [TreeNode n=null;]
 									}
 									text[t]
 									{
-										n = t;	
+										n = t;
 									}									
 								;
 
@@ -504,6 +547,8 @@ text_wo_bracket[TextNode n]
 												{
 													n.appendContent(ele.getText());
 												}
+								| q:QUOTE { n.appendContent(q.getText()); }
+								| dq:DQUOTE { n.appendContent(dq.getText()); }
 								)+
 								;										
 												
@@ -511,7 +556,7 @@ text_wo_bracket[TextNode n]
 									
 text[TextNode n]
 {}
-								:	text_wo_bracket[n]
+								:	(text_wo_bracket[n]
 								|	bopen:BOPEN
 												{	
 													n.appendContent(bopen.getText());
@@ -537,7 +582,8 @@ text[TextNode n]
 								|	q:QUOTES
 												{	
 													n.appendContent(q.getText());
-												}								
+												}	
+												)+							
 								;
 
 //text_suite[TextNode n]

@@ -38,4 +38,6 @@ public interface XMLLexerTokenTypes {
 	int EQ = 33;
 	int WS = 34;
 	int TEXT = 35;
+	int QUOTE = 36;
+	int DQUOTE = 37;
 }

@@ -33,7 +33,7 @@ public class Main {
 
         Token t = null;
 
-        if (0 != 0) {
+        if (1 != 0) {
             while ((t = lexer.nextToken()).getText() != null) {
                 System.out.println(t);
             }
