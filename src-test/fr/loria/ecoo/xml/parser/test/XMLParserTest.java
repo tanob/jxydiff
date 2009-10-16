@@ -11,6 +11,7 @@ import java.util.List;
 import junit.framework.TestCase;
 import fr.loria.ecoo.so6.antlr.XMLLexer;
 import fr.loria.ecoo.so6.antlr.XMLParser;
+import fr.loria.ecoo.so6.xml.node.CommentNode;
 import fr.loria.ecoo.so6.xml.node.Document;
 import fr.loria.ecoo.so6.xml.node.TextNode;
 import fr.loria.ecoo.so6.xml.node.TreeNode;
@@ -24,7 +25,7 @@ import fr.loria.ecoo.so6.xml.xydiff.XyDiff;
  *
  */
 public class XMLParserTest extends TestCase {
-	public void _testThereIsNoSiblingTextNodes() throws Exception {
+	public void testThereIsNoSiblingTextNodes() throws Exception {
 		XMLLexer lexer = new XMLLexer(new StringReader("<p>I've got you.</p>"));
 		XMLParser parser = new XMLParser(lexer);
 		Document document = parser.document();
@@ -70,5 +71,21 @@ public class XMLParserTest extends TestCase {
 		
 		assertTrue(node instanceof TextNode);
 		assertEquals("iv'e", ((TextNode)node).getContent());
+	}
+	
+	public void testWhitespaceAndCommentsAreChildren() throws Exception {
+		XMLLexer lexer1 = new XMLLexer(new StringReader(
+				"<?xml version=\"1.0\"?><p> <!-- comment --></p>"));
+        XMLParser parser1 = new XMLParser(lexer1);
+		
+		Document doc1 = parser1.document();
+		
+		assertEquals(1, doc1.getChildren().size());
+		assertEquals(2, doc1.getChild(0).getChildren().size());
+		
+		TreeNode nodeP = doc1.getChild(0);
+		
+		assertTrue(nodeP.getChild(0) instanceof TextNode);
+		assertTrue(nodeP.getChild(1) instanceof CommentNode);
 	}
 }

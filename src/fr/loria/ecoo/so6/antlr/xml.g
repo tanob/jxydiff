@@ -109,7 +109,7 @@ public static void joinSiblingTextNodes(TreeNode node) {
 			for (int i=0; i < numChildren; i++) {
 				aux = node.getChild(i);
 				
-				if (aux instanceof TextNode) {
+				if (aux instanceof TextNode && !(aux instanceof CommentNode)) {
 					if (startPos == -1)
 						startPos = i;
 					else {
