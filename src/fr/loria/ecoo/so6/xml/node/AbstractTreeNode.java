@@ -75,16 +75,45 @@ public abstract class AbstractTreeNode implements TreeNode, Serializable {
     }
 
     public boolean removeChild(TreeNode child) {
+    	TreeNode prev = child.getPreviousSibling();
+    	TreeNode next = child.getNextSibling();
+    	
         child.setParent(null);
 
-        return children.remove(child);
+        boolean result = children.remove(child);
+        
+        if (prev != null && next != null
+        		&& isReallyTextNode(prev)
+        		&& isReallyTextNode(next)) {
+        	String joinedContent = ((TextNode)prev).getContent() + ((TextNode)next).getContent();
+        	int firstTextNodePos = this.getChildPosition(prev);
+        	
+        	children.remove(prev);
+        	children.remove(next);
+        	
+        	TextNode joinedNode = new TextNode(joinedContent);
+        	this.insertChild(firstTextNodePos, joinedNode);
+        }
+        
+        return result;
+    }
+    
+    private boolean isReallyTextNode(TreeNode node) {
+    	boolean result = node instanceof TextNode &&
+    		!(node instanceof CommentNode 
+    				|| node instanceof CDataNode 
+    				|| node instanceof ProcessingInstructionNode 
+    				|| node instanceof DocTypeNode);
+    	
+    	return result;
     }
 
     public TreeNode removeChild(int pos) {
-        TreeNode node = (TreeNode) children.remove(pos);
-        node.setParent(null);
-
-        return node;
+    	TreeNode child = this.getChild(pos);
+    	
+    	this.removeChild(child);
+    	
+    	return child;
     }
 
     public void appendChild(TreeNode child) {

@@ -17,6 +17,7 @@
  */
 package fr.loria.ecoo.xml.xydiff.test;
 
+import fr.loria.ecoo.so6.xml.node.CommentNode;
 import fr.loria.ecoo.so6.xml.node.Document;
 import fr.loria.ecoo.so6.xml.node.ElementNode;
 import fr.loria.ecoo.so6.xml.node.TextNode;
@@ -162,6 +163,22 @@ public class DeleteNodeTest extends TestCase {
 
         assertTrue("XML Command", s1.equals(s2));
     }
+    
+    public void testTextNodesShouldBeTogether() throws Exception {
+		Document doc = new Document();
+		TextNode t1 = new TextNode("t1");
+		TextNode t2 = new TextNode("t2");
+		CommentNode c1 = new CommentNode("comment");
+		doc.appendChild(t1);
+		doc.appendChild(c1);
+		doc.appendChild(t2);
+		
+		assertEquals("<?xml version=\"1.0\"?>t1<!--comment-->t2", doc.toString());
+		
+		doc.removeChild(c1);
+		
+		assertEquals(1, doc.getChildren().size());
+	}
 
     protected void tearDown() throws Exception {
         System.out.println(tempDirPath);
